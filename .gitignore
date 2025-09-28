@@ -1,2 +1,5 @@
 JaylaTaylor-PromptPRJT.txt
 .vercel
+.env.supabase.local
+.env.local
+.env

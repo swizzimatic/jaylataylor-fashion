@@ -1,0 +1,44 @@
+# Supabase Project Configuration
+# Project: JaylaTaylor Fashion E-commerce
+
+[project]
+name = "jaylataylor-fashion"
+region = "us-east-1"
+
+[api]
+enabled = true
+# Replace with your actual Supabase URL
+url = "https://your-project.supabase.co"
+# Replace with your actual Supabase anon key
+anon_key = "your-anon-key"
+# Replace with your actual Supabase service key (keep secret!)
+service_role_key = "your-service-role-key"
+
+[db]
+pooler_enabled = true
+pool_mode = "transaction"
+
+[storage]
+enabled = true
+
+[auth]
+enable_signup = true
+enable_email_signup = true
+enable_phone_signup = false
+enable_magic_link = true
+enable_email_confirmation = true
+jwt_expiry = 3600
+minimum_password_length = 8
+
+[auth.external]
+google = false
+github = false
+apple = false
+
+[studio]
+enabled = true
+
+[functions]
+# Edge Functions configuration
+enabled = true
+verify_jwt = true
