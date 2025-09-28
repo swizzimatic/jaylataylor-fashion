@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "jaylataylor-fashion",
   "functions": {
     "jaylataylor-website/api/index.js": {
       "maxDuration": 10
@@ -16,12 +15,12 @@
       "destination": "/jaylataylor-website/api"
     },
     {
-      "source": "/:path*",
-      "destination": "/jaylataylor-website/:path*"
-    },
-    {
       "source": "/",
       "destination": "/jaylataylor-website/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/jaylataylor-website/:path*"
     }
   ]
 }
