@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Configuration
-    const API_BASE_URL = 'https://jaylataylor.com/api';
+    const API_BASE_URL = 'https://www.jaylataylor.com/api';
     
     // State management
     let connectedAccountId = localStorage.getItem('stripeConnectedAccountId');
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * This function is called from checkout.js
  */
 async function createMarketplacePaymentIntent(amount, sellerAccountId, cartItems, customerEmail) {
-    const API_BASE_URL = 'https://jaylataylor.com/api';
+    const API_BASE_URL = 'https://www.jaylataylor.com/api';
     
     try {
         const response = await fetch(`${API_BASE_URL}/stripe-connect/create-payment-intent`, {

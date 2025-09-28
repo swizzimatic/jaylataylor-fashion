@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })(),
     sessionId: localStorage.getItem("cartSessionId") || null,
-    apiBaseUrl: "https://jaylataylor.com/api",
+    apiBaseUrl: "https://www.jaylataylor.com/api",
 
     init: function () {
       if (!this.sessionId) {

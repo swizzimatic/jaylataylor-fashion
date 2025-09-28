@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
     
     // Backend API URL - Using custom domain
-    const backendUrl = 'https://jaylataylor.com';
+    const backendUrl = 'https://www.jaylataylor.com';
     
     // Initialize Stripe dynamically from backend config
     let stripe;

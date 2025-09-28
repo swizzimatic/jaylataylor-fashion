@@ -43,7 +43,7 @@ function initializeContactForm() {
         
         try {
             // Send to backend
-            const response = await fetch('https://jaylataylor.com/api/contact', {
+            const response = await fetch('https://www.jaylataylor.com/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -208,7 +208,7 @@ function initializeNewsletterForm() {
 
 async function subscribeToNewsletter(email) {
     try {
-        const response = await fetch('https://jaylataylor.com/api/newsletter', {
+        const response = await fetch('https://www.jaylataylor.com/api/newsletter', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
