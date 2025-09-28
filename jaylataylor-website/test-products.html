@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Products</title></head>
+<body>
+<h1>Testing Product Rendering</h1>
+<div id="productGrid" style="border: 2px solid blue; padding: 10px; min-height: 100px;">
+  Initial Grid Content
+</div>
+
+<script>
+console.log('Test starting...');
+
+// Test that productGrid exists
+const grid = document.getElementById('productGrid');
+console.log('Grid element found:', !!grid);
+
+// Try to render products
+async function test() {
+  try {
+    console.log('Fetching products...');
+    const response = await fetch('data/products.json');
+    console.log('Response status:', response.status);
+
+    const data = await response.json();
+    console.log('Products loaded:', data.products.length);
+
+    // Filter swim products
+    const swimProducts = data.products.filter(p => p.category === 'swim');
+    console.log('Swim products:', swimProducts.length);
+
+    // Render them
+    grid.innerHTML = '';
+    swimProducts.forEach(product => {
+      const div = document.createElement('div');
+      div.style.border = '1px solid green';
+      div.style.margin = '5px';
+      div.style.padding = '5px';
+      div.textContent = `${product.name} - $${product.price}`;
+      grid.appendChild(div);
+    });
+
+    console.log('Rendering complete');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+test();
+</script>
+</body>
+</html>

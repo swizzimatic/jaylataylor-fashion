@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Shop Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .debug { background: #f0f0f0; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .debug pre { white-space: pre-wrap; word-wrap: break-word; }
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0; }
+        .product-card { border: 1px solid #ddd; padding: 15px; background: white; }
+        .product-image { height: 200px; overflow: hidden; margin-bottom: 10px; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; }
+        h3 { margin: 10px 0 5px 0; }
+        .price { color: #28a745; font-weight: bold; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Complete Shop Test - Swim Category</h1>
+
+    <div class="debug">
+        <h2>Test Results:</h2>
+        <pre id="testLog"></pre>
+    </div>
+
+    <h2>Products Grid:</h2>
+    <div class="product-grid" id="productGrid"></div>
+
+    <script>
+        const log = document.getElementById('testLog');
+        const grid = document.getElementById('productGrid');
+
+        function addLog(message, type = 'info') {
+            const timestamp = new Date().toISOString().split('T')[1].split('.')[0];
+            const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+            log.textContent += `[${timestamp}] ${prefix} ${message}\n`;
+        }
+
+        async function runShopTest() {
+            addLog('Starting shop test...');
+
+            // Check URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            addLog(`URL category parameter: ${categoryParam || 'none'}`);
+
+            try {
+                // Load products
+                addLog('Loading products.json...');
+                const response = await fetch('data/products.json');
+
+                if (!response.ok) {
+                    throw new Error(`Failed to load products: ${response.status}`);
+                }
+
+                const data = await response.json();
+                addLog(`Loaded ${data.products.length} total products`, 'success');
+
+                // Filter for swim category
+                const swimProducts = data.products.filter(p => p.category === 'swim');
+                addLog(`Found ${swimProducts.length} swim products`, swimProducts.length > 0 ? 'success' : 'error');
+
+                if (swimProducts.length === 0) {
+                    addLog('No swim products found in data!', 'error');
+                    return;
+                }
+
+                // Display each product
+                addLog('Rendering swim products...');
+                swimProducts.forEach((product, index) => {
+                    addLog(`  ${index + 1}. ${product.name} (ID: ${product.id}, Price: $${product.price})`);
+
+                    // Create card
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+
+                    const fallback = 'https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/HANGTAG1_dcne9m?_a=BAMAK+cc0';
+                    const img = product.images && product.images[0] || fallback;
+
+                    card.innerHTML = `
+                        <div class="product-image">
+                            <img src="${img}" alt="${product.name}"
+                                 onerror="this.onerror=null; this.src='${fallback}'">
+                        </div>
+                        <h3>${product.name}</h3>
+                        <p class="price">$${product.price}</p>
+                        <p><small>Category: ${product.category}</small></p>
+                        <p><small>ID: ${product.id}</small></p>
+                    `;
+
+                    grid.appendChild(card);
+                });
+
+                addLog(`Successfully rendered ${swimProducts.length} products`, 'success');
+
+                // Now test the actual shop.js behavior
+                addLog('\n--- Testing shop.js behavior ---');
+
+                // Check if shop.js modifies the DOM
+                setTimeout(() => {
+                    const shopGridCards = document.querySelectorAll('#productGrid .product-card');
+                    addLog(`Product cards in grid after shop.js: ${shopGridCards.length}`);
+
+                    if (shopGridCards.length === 0) {
+                        addLog('shop.js may have cleared the grid!', 'error');
+                    }
+                }, 2000);
+
+            } catch (error) {
+                addLog(`Error: ${error.message}`, 'error');
+                console.error(error);
+            }
+        }
+
+        // Run test immediately
+        runShopTest();
+
+        // Also log any console errors
+        window.addEventListener('error', (event) => {
+            addLog(`JS Error: ${event.message} at ${event.filename}:${event.lineno}`, 'error');
+        });
+    </script>
+
+    <!-- Now include the actual shop.js to see if it interferes -->
+    <div style="display:none">
+        <div id="categoryFilters">
+            <label><input type="checkbox" value="all" checked> All</label>
+            <label><input type="checkbox" value="swim"> Swim</label>
+        </div>
+        <span id="productCount">0</span>
+        <input id="priceRange" type="range" value="1000">
+        <span id="maxPrice">1000</span>
+        <select id="sortSelect"><option value="featured">Featured</option></select>
+    </div>
+
+    <div class="debug" style="margin-top: 30px">
+        <h2>shop.js Console Output:</h2>
+        <pre id="shopConsole"></pre>
+    </div>
+
+    <script>
+        // Capture shop.js console output
+        const shopConsole = document.getElementById('shopConsole');
+        const originalConsoleLog = console.log;
+        const originalConsoleError = console.error;
+        const originalConsoleWarn = console.warn;
+
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            shopConsole.textContent += '[LOG] ' + args.join(' ') + '\n';
+        };
+
+        console.error = function(...args) {
+            originalConsoleError.apply(console, args);
+            shopConsole.textContent += '[ERROR] ' + args.join(' ') + '\n';
+        };
+
+        console.warn = function(...args) {
+            originalConsoleWarn.apply(console, args);
+            shopConsole.textContent += '[WARN] ' + args.join(' ') + '\n';
+        };
+    </script>
+
+    <!-- Load CloudinaryMapper and shop.js -->
+    <script src="js/cloudinary-mapper.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

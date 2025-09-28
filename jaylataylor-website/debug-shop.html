@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Debug Shop</title>
+    </head>
+    <body>
+        <h1>Debug Shop - Step by Step</h1>
+
+        <!-- Required DOM elements -->
+        <div
+            id="productGrid"
+            style="border: 2px solid red; min-height: 100px; padding: 10px"
+        >
+            Product Grid
+        </div>
+        <div id="productCount">0</div>
+        <div id="categoryFilters">
+            <label><input type="checkbox" value="all" checked /> All</label>
+            <label><input type="checkbox" value="swim" /> Swim</label>
+        </div>
+        <select id="sortSelect">
+            <option value="featured">Featured</option>
+        </select>
+        <input id="priceRange" type="range" value="1000" />
+        <span id="maxPrice">1000</span>
+        <div class="shop-sidebar"></div>
+
+        <h2>Console Output:</h2>
+        <pre
+            id="console"
+            style="
+                background: #222;
+                color: #0f0;
+                padding: 15px;
+                height: 400px;
+                overflow: auto;
+            "
+        ></pre>
+
+        <script>
+            // Capture console output
+            const consoleEl = document.getElementById("console");
+            function logToConsole(msg, type = "LOG") {
+                const time = new Date().toLocaleTimeString();
+                const color =
+                    type === "ERROR"
+                        ? "#f00"
+                        : type === "WARN"
+                          ? "#ff0"
+                          : "#0f0";
+                consoleEl.innerHTML += `<span style="color:${color}">[${time}] [${type}] ${msg}</span>\n`;
+                consoleEl.scrollTop = consoleEl.scrollHeight;
+            }
+
+            // Override console methods
+            const originalLog = console.log;
+            const originalError = console.error;
+            const originalWarn = console.warn;
+
+            console.log = function (...args) {
+                originalLog.apply(console, args);
+                logToConsole(args.join(" "), "LOG");
+            };
+
+            console.error = function (...args) {
+                originalError.apply(console, args);
+                logToConsole(args.join(" "), "ERROR");
+            };
+
+            console.warn = function (...args) {
+                originalWarn.apply(console, args);
+                logToConsole(args.join(" "), "WARN");
+            };
+
+            // Catch errors
+            window.onerror = function (msg, url, line, col, error) {
+                logToConsole(
+                    `JS ERROR: ${msg} at ${url}:${line}:${col}`,
+                    "ERROR",
+                );
+                if (error && error.stack) {
+                    logToConsole(error.stack, "ERROR");
+                }
+                return false;
+            };
+
+            // Log initial state
+            logToConsole("Page loaded", "LOG");
+            logToConsole(
+                "productGrid found: " +
+                    !!document.getElementById("productGrid"),
+                "LOG",
+            );
+            logToConsole(
+                "productCount found: " +
+                    !!document.getElementById("productCount"),
+                "LOG",
+            );
+            logToConsole("URL: " + window.location.href, "LOG");
+
+            // Track fetch calls
+            const originalFetch = window.fetch;
+            window.fetch = function (...args) {
+                logToConsole("FETCH: " + args[0], "LOG");
+                return originalFetch
+                    .apply(this, args)
+                    .then((response) => {
+                        logToConsole(
+                            "FETCH response status: " +
+                                response.status +
+                                " for " +
+                                args[0],
+                            "LOG",
+                        );
+                        return response;
+                    })
+                    .catch((error) => {
+                        logToConsole(
+                            "FETCH ERROR: " + error.message + " for " + args[0],
+                            "ERROR",
+                        );
+                        throw error;
+                    });
+            };
+        </script>
+
+        <!-- Now load the actual shop files -->
+        <script src="js/cloudinary-mapper.js"></script>
+        <script src="js/shop.js"></script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Error Test</title></head>
+<body>
+<div id="productGrid"></div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked></label>
+  <label><input type="checkbox" value="swim"></label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+
+<script>
+window.addEventListener('error', function(e) {
+  document.body.innerHTML += '<p style="color:red">ERROR: ' + e.message + ' at line ' + e.lineno + '</p>';
+});
+</script>
+
+<script src="js/cloudinary-mapper.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

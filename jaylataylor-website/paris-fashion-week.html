@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Fashion Week 2024 - Jayla Taylor</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Paris Fashion Week 2024</h1>
+            <p class="hero-subtitle">Elegance & Sophistication on the Parisian Runway</p>
+        </div>
+    </section>
+
+    <!-- Runway Show Section with Video -->
+    <section class="runway-show-section" style="padding: 4rem 0; background-color: var(--secondary-dark);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white); text-align: center; margin-bottom: 3rem;">Runway Show</h2>
+            
+            <!-- Fashion Show Video -->
+            <div class="video-container" style="max-width: 900px; margin: 0 auto 3rem;">
+                <video controls poster="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5890_1_ylxgc0?_a=BAMAK+cc0" 
+                       style="width: 100%; height: auto; border-radius: 8px;">
+                    <source src="https://jaylataylor.com/content/Paris%20Fashion%20Week%2024%E2%80%99/fashion-show.mp4" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video.</p>
+                </video>
+            </div>
+            
+            <div class="runway-showcase" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5890_1_ylxgc0?_a=BAMAK+cc0" alt="Paris Runway Look 1" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5893_yvv0lo?_a=BAMAK+cc0" alt="Paris Runway Look 2" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5888_d8bipl?_a=BAMAK+cc0" alt="Paris Runway Look 3" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5881_1_kge2iz?_a=BAMAK+cc0" alt="Paris Runway Look 4" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5882_fjljyz?_a=BAMAK+cc0" alt="Paris Runway Look 5" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+                <div class="runway-feature">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5895_1_hwqspj?_a=BAMAK+cc0" alt="Paris Runway Look 6" style="width: 100%; height: auto; border-radius: 4px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="runway">Runway</button>
+                <button class="filter-btn" data-filter="backstage">Backstage</button>
+                <button class="filter-btn" data-filter="editorial">Editorial</button>
+                <button class="filter-btn" data-filter="details">Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Paris Fashion Week 2024 Gallery Items -->
+                
+                <!-- Editorial and Portrait Photography -->
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5881_1_kge2iz?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Editorial Portrait</h3>
+                            <p>Professional Photography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5882_fjljyz?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Creative Direction</h3>
+                            <p>Artistic Vision</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5883_wnm922?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Backstage">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Behind the Scenes</h3>
+                            <p>Show Preparation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5888_d8bipl?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Press Feature</h3>
+                            <p>Media Coverage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5889_1_xoo2fj?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Backstage">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Pre-Show Moments</h3>
+                            <p>Final Preparation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5890_1_ylxgc0?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Fashion Portrait</h3>
+                            <p>Studio Photography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5891_tigk69?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Style Moment</h3>
+                            <p>Fashion Editorial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5892_u4ylht?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Magazine Feature</h3>
+                            <p>Editorial Spread</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5893_yvv0lo?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Press Coverage</h3>
+                            <p>Media Spotlight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5894_apugrw?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Fashion Story</h3>
+                            <p>Editorial Narrative</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5895_1_hwqspj?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Iconic Moment</h3>
+                            <p>Fashion History</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5920_xbhn9m?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Professional Editorial</h3>
+                            <p>Fashion Photography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="editorial">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5921_czl7u6?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Editorial">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Exclusive Feature</h3>
+                            <p>International Press</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Runway Photography -->
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-194_hz8b2y?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Opening Collection</h3>
+                            <p>Runway Debut</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-196_tbo7o7?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Couture Elegance</h3>
+                            <p>Statement Look</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-197_uspnzi?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Signature Design</h3>
+                            <p>Designer Showcase</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-199_e3m7i8?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Evening Sophistication</h3>
+                            <p>Luxury Collection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-200_xgijx8?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Contemporary Design</h3>
+                            <p>Modern Chic</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-202_jxfhox?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Haute Couture</h3>
+                            <p>Artisan Craftsmanship</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-207_1_hmkroq?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Show Stopper</h3>
+                            <p>Dramatic Finale</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-208_vybvmd?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Designer Vision</h3>
+                            <p>Creative Expression</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-223_fwdnyv?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Statement Piece</h3>
+                            <p>Bold Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-225_1_m8dew2?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Couture Artistry</h3>
+                            <p>Handcrafted Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-231_1_gaciy3?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Avant-Garde Design</h3>
+                            <p>Fashion Innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-233_lcbk5j?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Luxury Collection</h3>
+                            <p>Premium Fashion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-235_aqsdim?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Creative Vision</h3>
+                            <p>Designer Expression</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details and Craftsmanship -->
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-211_s3sueo?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Intricate Details</h3>
+                            <p>Masterful Craftsmanship</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-212_o5xwxr?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Textile Excellence</h3>
+                            <p>Material Innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-213_l09vnz?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Precision Work</h3>
+                            <p>Artisan Quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-214_hclw1h?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Design Focus</h3>
+                            <p>Detail Perfection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-221_cmnkyv?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Construction Detail</h3>
+                            <p>Technical Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-243_iqcaxm?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Fine Craftsmanship</h3>
+                            <p>Hand-finished Work</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-244_2_zk4wtd?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Premium Materials</h3>
+                            <p>Luxury Textiles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-245_1_g0b7ka?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Creative Innovation</h3>
+                            <p>Design Elements</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-247_qqgvnr?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Details">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Artisan Details</h3>
+                            <p>Handcrafted Beauty</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Collection Pieces -->
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-248_2_olvrwd?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Collection Finale</h3>
+                            <p>Grand Conclusion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-249_uvdijg?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Signature Style</h3>
+                            <p>Designer Identity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-250_1_okzmjf?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Timeless Design</h3>
+                            <p>Elegant Silhouette</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-251_mumnmv?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Contemporary Luxury</h3>
+                            <p>Fashion Forward</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-252_caahkx?_a=BAMAK+cc0" alt="Paris Fashion Week 2024 Runway">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Perfect Finish</h3>
+                            <p>Show Completion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button class="btn btn-outline" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Paris Fashion Week 2024 - Collection Videos</h2>
+            
+            <!-- Primary Video - Jayla Taylor Feature -->
+            <div class="video-container">
+                <video controls poster="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-197_uspnzi?_a=BAMAK+cc0" class="gallery-video">
+                    <source src="https://jaylataylor.com/content/Paris%20Fashion%20Week%2024%E2%80%99/JAYLA%20TAYLOR.mov" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video. <a href="https://jaylataylor.com/content/Paris%20Fashion%20Week%2024%E2%80%99/JAYLA%20TAYLOR.mov">Download the video</a> instead.</p>
+                </video>
+                <div class="video-info">
+                    <h3>Jayla Taylor - Paris Fashion Week 2024</h3>
+                    <p>Exclusive behind-the-scenes footage and runway highlights from Paris Fashion Week 2024</p>
+                </div>
+            </div>
+
+            <!-- Secondary Video - Jewelry Collaboration -->
+            <div class="video-container" style="margin-top: 40px;">
+                <video controls poster="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-211_s3sueo?_a=BAMAK+cc0" class="gallery-video">
+                    <source src="https://jaylataylor.com/content/Paris%20Fashion%20Week%2024%E2%80%99/JAYLA%20TAYLOR%2C%20RAQUEL%20ROSALIE%20JEWELRY.MP4" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video. <a href="https://jaylataylor.com/content/Paris%20Fashion%20Week%2024%E2%80%99/JAYLA%20TAYLOR%2C%20RAQUEL%20ROSALIE%20JEWELRY.MP4">Download the video</a> instead.</p>
+                </video>
+                <div class="video-info">
+                    <h3>Jayla Taylor × Raquel Rosalie Jewelry</h3>
+                    <p>Exclusive jewelry collaboration showcase featuring designer pieces from Paris Fashion Week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designer Interview -->
+    <section class="video-showcase" style="padding: 4rem 0; background-color: var(--secondary-dark);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white); text-align: center; margin-bottom: 3rem;">Designer Interview</h2>
+            
+            <!-- Interview Video -->
+            <div class="video-container" style="max-width: 800px; margin: 0 auto;">
+                <h3 style="color: var(--gold-primary); text-align: center; margin-bottom: 1.5rem;">Paris Fashion Week Interview</h3>
+                <video controls poster="https://jaylataylor.com/content/Magazine%20features/IMG_5893.PNG" class="gallery-video" style="width: 100%; border-radius: 8px;">
+                    <source src="https://jaylataylor.com/content/interview.mp4" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video.</p>
+                </video>
+                <div class="video-info" style="text-align: center; margin-top: 1.5rem;">
+                    <p style="color: var(--white); opacity: 0.8;">Exclusive interview with Jayla Taylor discussing her Paris Fashion Week experience and creative inspiration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><title>Console Test</title></head>
+<body>
+<h1>Console Output:</h1>
+<div id="productGrid"></div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked></label>
+  <label><input type="checkbox" value="swim"></label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+<div class="shop-sidebar"></div>
+
+<pre id="console" style="background:#000; color:#0f0; padding:20px; font-family:monospace;"></pre>
+
+<script>
+const output = document.getElementById('console');
+const originalLog = console.log;
+const originalError = console.error;
+const originalWarn = console.warn;
+
+console.log = function(...args) {
+  originalLog.apply(console, args);
+  output.innerHTML += '<span style="color:#0f0">[LOG] ' + args.join(' ') + '</span>\n';
+};
+
+console.error = function(...args) {
+  originalError.apply(console, args);
+  output.innerHTML += '<span style="color:#f00">[ERROR] ' + args.join(' ') + '</span>\n';
+};
+
+console.warn = function(...args) {
+  originalWarn.apply(console, args);
+  output.innerHTML += '<span style="color:#ff0">[WARN] ' + args.join(' ') + '</span>\n';
+};
+
+window.onerror = function(msg, url, line, col, error) {
+  output.innerHTML += '<span style="color:#f0f">[JS ERROR] ' + msg + ' at line ' + line + '</span>\n';
+  if (error && error.stack) {
+    output.innerHTML += '<span style="color:#f0f">' + error.stack + '</span>\n';
+  }
+  return false;
+};
+</script>
+
+<script src="js/cloudinary-mapper.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+CLOUDINARY ASSET REPORT BY FOLDER
+════════════════════════════════════════════════════════════
+Generated: 2025-09-18T19:22:09.132Z
+Cloud Name: whxy
+
+OVERALL STATISTICS
+────────────────────────────────────────
+Total Folders: 12
+Total Items: 410
+Total Size: 786.43 MB
+
+FOLDER BREAKDOWN
+────────────────────────────────────────
+
+📁 collaborative-Work
+   Path: collaborative-Work
+   Items: 52
+   Size: 126.03 MB
+   Sample files:
+     1. test_3.mov_hgntlh
+        - Format: mov
+        - Dimensions: 1280x720
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/test_3.mov_hgntlh?_a=BAMAK+cc0
+     2. IMG_7600_ehvw34
+        - Format: jpg
+        - Dimensions: 2550x3188
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7600_ehvw34?_a=BAMAK+cc0
+     3. IMG_7598_u2pzp7
+        - Format: jpg
+        - Dimensions: 2550x3188
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7598_u2pzp7?_a=BAMAK+cc0
+     4. IMG_9814_gadj70
+        - Format: jpg
+        - Dimensions: 2550x3300
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_9814_gadj70?_a=BAMAK+cc0
+     5. IMG_7602_e9gza3
+        - Format: jpg
+        - Dimensions: 1275x1594
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7602_e9gza3?_a=BAMAK+cc0
+     ... and 47 more files
+
+📁 collaborative-work
+   Path: collaborative-work
+   Items: 52
+   Size: 126.03 MB
+   Sample files:
+     1. test_3.mov_hgntlh
+        - Format: mov
+        - Dimensions: 1280x720
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/test_3.mov_hgntlh?_a=BAMAK+cc0
+     2. IMG_7600_ehvw34
+        - Format: jpg
+        - Dimensions: 2550x3188
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7600_ehvw34?_a=BAMAK+cc0
+     3. IMG_7598_u2pzp7
+        - Format: jpg
+        - Dimensions: 2550x3188
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7598_u2pzp7?_a=BAMAK+cc0
+     4. IMG_9814_gadj70
+        - Format: jpg
+        - Dimensions: 2550x3300
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_9814_gadj70?_a=BAMAK+cc0
+     5. IMG_7602_e9gza3
+        - Format: jpg
+        - Dimensions: 1275x1594
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7602_e9gza3?_a=BAMAK+cc0
+     ... and 47 more files
+
+📁 info-for-shop
+   Path: info-for-shop
+   Items: 7
+   Size: 3.03 MB
+   Sample files:
+     1. pic7_yj6zgf
+        - Format: jpg
+        - Dimensions: 1663x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/pic7_yj6zgf?_a=BAMAK+cc0
+     2. pic4_cgywvq
+        - Format: jpg
+        - Dimensions: 2320x2500
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/pic4_cgywvq?_a=BAMAK+cc0
+     3. pic6_idlvhn
+        - Format: jpg
+        - Dimensions: 1662x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/pic6_idlvhn?_a=BAMAK+cc0
+     4. pic5_gzzaiq
+        - Format: jpg
+        - Dimensions: 2128x2475
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/pic5_gzzaiq?_a=BAMAK+cc0
+     5. pic3_dz5fnc
+        - Format: jpg
+        - Dimensions: 1875x2500
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/pic3_dz5fnc?_a=BAMAK+cc0
+     ... and 2 more files
+
+📁 j-t-accessories
+   Path: j-t-accessories
+   Items: 24
+   Size: 55.39 MB
+   Sample files:
+     1. IMG_2839_xqw8rm
+        - Format: jpg
+        - Dimensions: 2766x3192
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2839_xqw8rm?_a=BAMAK+cc0
+     2. IMG_2972_drsikp
+        - Format: jpg
+        - Dimensions: 2453x3254
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2972_drsikp?_a=BAMAK+cc0
+     3. IMG_2950_im7jq0
+        - Format: jpg
+        - Dimensions: 3022x3634
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2950_im7jq0?_a=BAMAK+cc0
+     4. IMG_2926_wq0hp9
+        - Format: jpg
+        - Dimensions: 2476x3433
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2926_wq0hp9?_a=BAMAK+cc0
+     5. IMG_2944_p2axwd
+        - Format: jpg
+        - Dimensions: 2716x3242
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2944_p2axwd?_a=BAMAK+cc0
+     ... and 19 more files
+
+📁 lingerie-collection
+   Path: lingerie-collection
+   Items: 15
+   Size: 84.65 MB
+   Sample files:
+     1. SJM08768_e64fub
+        - Format: jpg
+        - Dimensions: 3376x6000
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08768_e64fub?_a=BAMAK+cc0
+     2. SJM08773_mzxsbj
+        - Format: jpg
+        - Dimensions: 3376x6000
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08773_mzxsbj?_a=BAMAK+cc0
+     3. SJM08777_h7myvm
+        - Format: jpg
+        - Dimensions: 3376x6000
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08777_h7myvm?_a=BAMAK+cc0
+     4. SJM08678_zq5rx0
+        - Format: jpg
+        - Dimensions: 3376x6000
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08678_zq5rx0?_a=BAMAK+cc0
+     5. SJM08687_ua3tex
+        - Format: jpg
+        - Dimensions: 3376x6000
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08687_ua3tex?_a=BAMAK+cc0
+     ... and 10 more files
+
+📁 logos
+   Path: logos
+   Items: 10
+   Size: 1.03 MB
+   Sample files:
+     1. logo_hzcohb
+        - Format: jpg
+        - Dimensions: 900x900
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/logo_hzcohb?_a=BAMAK+cc0
+     2. JT_CLOTHING_LABEL_wyw9cw
+        - Format: jpg
+        - Dimensions: 720x180
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/JT_CLOTHING_LABEL_wyw9cw?_a=BAMAK+cc0
+     3. jaylataylor_logo_wy9xuh
+        - Format: png
+        - Dimensions: 1274x372
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/jaylataylor_logo_wy9xuh?_a=BAMAK+cc0
+     4. J.T_pgql90
+        - Format: jpg
+        - Dimensions: 1200x1200
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/J.T_pgql90?_a=BAMAK+cc0
+     5. J.T_LOGO_mlhmc0
+        - Format: png
+        - Dimensions: 1137x1137
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/J.T_LOGO_mlhmc0?_a=BAMAK+cc0
+     ... and 5 more files
+
+📁 magazine-features
+   Path: magazine-features
+   Items: 21
+   Size: 18.75 MB
+   Sample files:
+     1. SHOW4-207_vogbm4
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-207_vogbm4?_a=BAMAK+cc0
+     2. IMG_9814_cjurto
+        - Format: jpg
+        - Dimensions: 2550x3300
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_9814_cjurto?_a=BAMAK+cc0
+     3. IMG_8715_cs3wyq
+        - Format: jpg
+        - Dimensions: 1170x1382
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8715_cs3wyq?_a=BAMAK+cc0
+     4. IMG_8714_tymyzj
+        - Format: jpg
+        - Dimensions: 1170x1353
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8714_tymyzj?_a=BAMAK+cc0
+     5. IMG_8713_lftcmx
+        - Format: jpg
+        - Dimensions: 1170x1955
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8713_lftcmx?_a=BAMAK+cc0
+     ... and 16 more files
+
+📁 newyork-fashion
+   Path: newyork-fashion
+   Items: 56
+   Size: 67.11 MB
+   Sample files:
+     1. IMG_8164_dkdn61
+        - Format: jpg
+        - Dimensions: 1147x1782
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8164_dkdn61?_a=BAMAK+cc0
+     2. IMG_8163_x0v1va
+        - Format: jpg
+        - Dimensions: 3919x5890
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8163_x0v1va?_a=BAMAK+cc0
+     3. IMG_8162_wwq1jh
+        - Format: jpg
+        - Dimensions: 4024x6048
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8162_wwq1jh?_a=BAMAK+cc0
+     4. IMG_8161_jf9y8f
+        - Format: jpg
+        - Dimensions: 4024x6048
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8161_jf9y8f?_a=BAMAK+cc0
+     5. IMG_8160_vvnjjd
+        - Format: jpg
+        - Dimensions: 4024x6048
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8160_vvnjjd?_a=BAMAK+cc0
+     ... and 51 more files
+
+📁 paris-fashion-week
+   Path: paris-fashion-week
+   Items: 56
+   Size: 96.28 MB
+   Sample files:
+     1. SHOW4-252_caahkx
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-252_caahkx?_a=BAMAK+cc0
+     2. SHOW4-251_mumnmv
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-251_mumnmv?_a=BAMAK+cc0
+     3. SHOW4-250_1_okzmjf
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-250_1_okzmjf?_a=BAMAK+cc0
+     4. SHOW4-250_jm2wfc
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-250_jm2wfc?_a=BAMAK+cc0
+     5. SHOW4-249_uvdijg
+        - Format: jpg
+        - Dimensions: 1536x2304
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-249_uvdijg?_a=BAMAK+cc0
+     ... and 51 more files
+
+📁 swim-collection
+   Path: swim-collection
+   Items: 29
+   Size: 11.97 MB
+   Sample files:
+     1. IMG_0185_ijzjdi
+        - Format: jpg
+        - Dimensions: 1995x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0185_ijzjdi?_a=BAMAK+cc0
+     2. IMG_0184_q7huvi
+        - Format: jpg
+        - Dimensions: 1995x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0184_q7huvi?_a=BAMAK+cc0
+     3. IMG_0183_ruyfhd
+        - Format: jpg
+        - Dimensions: 1995x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0183_ruyfhd?_a=BAMAK+cc0
+     4. IMG_0182_uhqnqf
+        - Format: jpg
+        - Dimensions: 1995x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0182_uhqnqf?_a=BAMAK+cc0
+     5. IMG_0181_mfg8ot
+        - Format: jpg
+        - Dimensions: 1870x2494
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0181_mfg8ot?_a=BAMAK+cc0
+     ... and 24 more files
+
+📁 swim24
+   Path: swim24
+   Items: 17
+   Size: 114.12 MB
+   Sample files:
+     1. IMG_1597_rqwitl
+        - Format: jpg
+        - Dimensions: 5472x3648
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1597_rqwitl?_a=BAMAK+cc0
+     2. IMG_1592_kvlnnq
+        - Format: jpg
+        - Dimensions: 3648x5472
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1592_kvlnnq?_a=BAMAK+cc0
+     3. IMG_1604_wlk1vd
+        - Format: jpg
+        - Dimensions: 3648x5472
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1604_wlk1vd?_a=BAMAK+cc0
+     4. IMG_1585_uzuolp
+        - Format: jpg
+        - Dimensions: 3648x5472
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1585_uzuolp?_a=BAMAK+cc0
+     5. IMG_1576_suqzxa
+        - Format: jpg
+        - Dimensions: 3648x5472
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1576_suqzxa?_a=BAMAK+cc0
+     ... and 12 more files
+
+📁 timeless-collection
+   Path: timeless-collection
+   Items: 71
+   Size: 82.04 MB
+   Sample files:
+     1. Jayla_Taylor_Low_Res_M44B6352_1_grc8ek
+        - Format: jpg
+        - Dimensions: 1188x1792
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6352_1_grc8ek?_a=BAMAK+cc0
+     2. Jayla_Taylor_Low_Res_M44B6350_r5m9u7
+        - Format: jpg
+        - Dimensions: 1198x1792
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6350_r5m9u7?_a=BAMAK+cc0
+     3. Jayla_Taylor_Low_Res_M44B6350_1_hzzrma
+        - Format: jpg
+        - Dimensions: 1198x1792
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6350_1_hzzrma?_a=BAMAK+cc0
+     4. Jayla_Taylor_Low_Res_M44B6321_hvc85g
+        - Format: jpg
+        - Dimensions: 1194x1792
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6321_hvc85g?_a=BAMAK+cc0
+     5. Jayla_Taylor_Low_Res_M44B6259_1_nladuo
+        - Format: jpg
+        - Dimensions: 1182x1792
+        - Product URL: https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6259_1_nladuo?_a=BAMAK+cc0
+     ... and 66 more files
+

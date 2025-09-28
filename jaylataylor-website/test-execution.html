@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head><title>Execution Test</title></head>
+<body>
+<h1>Shop.js Execution Test</h1>
+
+<!-- All required elements -->
+<div id="productGrid" style="border:2px solid red; padding:10px;">Grid</div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked> All</label>
+  <label><input type="checkbox" value="swim"> Swim</label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+<div class="shop-sidebar"></div>
+
+<pre id="log" style="background:#000; color:#0f0; padding:10px; height:500px; overflow:auto;"></pre>
+
+<script>
+// Capture everything
+const logEl = document.getElementById('log');
+let logCount = 0;
+
+function log(msg, type = 'LOG') {
+  logCount++;
+  const colors = {LOG: '#0f0', ERROR: '#f00', WARN: '#ff0', INFO: '#0ff'};
+  logEl.innerHTML += `<span style="color:${colors[type]}">${logCount}. [${type}] ${msg}</span>\n`;
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+// Override console
+['log', 'error', 'warn', 'info'].forEach(method => {
+  const original = console[method];
+  console[method] = function(...args) {
+    original.apply(console, args);
+    log(args.join(' '), method.toUpperCase());
+  };
+});
+
+// Track errors
+window.onerror = (msg, url, line) => {
+  log(`JS ERROR: ${msg} at line ${line}`, 'ERROR');
+  return false;
+};
+
+// Track script loading
+log('Page loaded', 'INFO');
+log('URL: ' + window.location.href, 'INFO');
+
+// Check DOM elements BEFORE loading shop.js
+log('BEFORE shop.js:', 'INFO');
+log('productGrid exists: ' + !!document.getElementById('productGrid'), 'INFO');
+log('productCount exists: ' + !!document.getElementById('productCount'), 'INFO');
+log('categoryFilters exists: ' + !!document.getElementById('categoryFilters'), 'INFO');
+</script>
+
+<!-- Load shop dependencies -->
+<script>
+log('Loading cloudinary-mapper.js...', 'INFO');
+</script>
+<script src="js/cloudinary-mapper.js"></script>
+
+<script>
+log('cloudinary-mapper.js loaded', 'INFO');
+log('CloudinaryMapper exists: ' + (typeof CloudinaryMapper !== 'undefined'), 'INFO');
+log('Loading shop.js...', 'INFO');
+</script>
+<script src="js/shop.js"></script>
+
+<script>
+log('shop.js loaded', 'INFO');
+log('AFTER shop.js:', 'INFO');
+log('productGrid HTML: ' + document.getElementById('productGrid').innerHTML.substring(0, 50), 'INFO');
+
+// Check if products loaded after a delay
+setTimeout(() => {
+  log('AFTER 3 seconds:', 'INFO');
+  const grid = document.getElementById('productGrid');
+  log('Grid children count: ' + grid.children.length, 'INFO');
+  log('Grid HTML preview: ' + grid.innerHTML.substring(0, 100), 'INFO');
+}, 3000);
+</script>
+
+</body>
+</html>

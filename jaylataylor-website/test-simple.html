@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head><title>Simple Test</title></head>
+<body>
+<h1>Simple Shop Test</h1>
+
+<div id="productGrid">Initial Grid Content</div>
+<div id="productCount">0</div>
+<div id="categoryFilters"></div>
+<select id="sortSelect"><option>test</option></select>
+<input id="priceRange" type="range">
+<span id="maxPrice">1000</span>
+
+<script>
+console.log('=== TEST STARTED ===');
+
+// Add a marker to verify shop.js ran
+window.shopJsExecuted = false;
+window.shopJsError = null;
+
+// Track DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOMContentLoaded fired in test');
+});
+
+// Verify elements exist
+console.log('productGrid exists:', !!document.getElementById('productGrid'));
+console.log('productCount exists:', !!document.getElementById('productCount'));
+
+// Add error handler
+window.addEventListener('error', (e) => {
+  console.error('Error caught:', e.message, 'at line', e.lineno);
+  window.shopJsError = e.message;
+});
+
+console.log('About to load shop.js...');
+</script>
+
+<!-- Only load shop.js, not cloudinary-mapper -->
+<script>
+// Add marker at beginning of shop.js
+let cloudinaryReady = false;
+console.log('Shop.js starting - cloudinaryReady defined');
+</script>
+<script src="js/shop.js"></script>
+
+<script>
+console.log('=== AFTER SHOP.JS ===');
+console.log('shopJsExecuted:', window.shopJsExecuted);
+console.log('shopJsError:', window.shopJsError);
+
+// Check after delay
+setTimeout(() => {
+  const grid = document.getElementById('productGrid');
+  console.log('=== AFTER 2 SECONDS ===');
+  console.log('Grid innerHTML:', grid ? grid.innerHTML : 'Grid not found');
+  console.log('Grid children:', grid ? grid.children.length : 'N/A');
+
+  // Try to manually fetch products
+  console.log('=== MANUAL FETCH TEST ===');
+  fetch('data/products.json')
+    .then(r => {
+      console.log('Fetch status:', r.status);
+      return r.json();
+    })
+    .then(data => {
+      console.log('Products loaded:', data.products ? data.products.length : 0);
+      const swimProducts = data.products.filter(p => p.category === 'swim');
+      console.log('Swim products:', swimProducts.map(p => p.name));
+    })
+    .catch(err => console.error('Fetch error:', err));
+}, 2000);
+</script>
+
+</body>
+</html>

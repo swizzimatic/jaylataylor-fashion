@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ - Jayla Taylor Fashion">
+    <meta name="keywords" content="Jayla Taylor FAQ, Questions, Help, Support">
+    
+    <title>FAQ - Jayla Taylor Fashion Designer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* FAQ Styles */
+        .faq-header {
+            background-color: var(--secondary-dark);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .faq-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold-2);
+        }
+        
+        .faq-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .faq-search {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .faq-search h3 {
+            color: var(--accent-gold-2);
+            margin-bottom: 1rem;
+        }
+        
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 15px;
+            border: 1px solid var(--accent-gold-2);
+            border-radius: 25px;
+            background-color: var(--primary-dark);
+            color: var(--neutral-light);
+            font-size: 1rem;
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-gold-2);
+        }
+        
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .faq-category {
+            background-color: var(--secondary-dark);
+            border: 1px solid var(--accent-gold-2);
+            color: var(--neutral-light);
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .faq-category:hover,
+        .faq-category.active {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+        }
+        
+        .faq-section {
+            margin-bottom: 2rem;
+        }
+        
+        .faq-section.hidden {
+            display: none;
+        }
+        
+        .faq-section h2 {
+            color: var(--accent-gold-2);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .faq-item {
+            background-color: var(--secondary-dark);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        
+        .faq-question h3 {
+            color: var(--accent-gold-1);
+            margin: 0;
+            font-size: 1.1rem;
+            flex: 1;
+            margin-right: 1rem;
+        }
+        
+        .faq-icon {
+            color: var(--accent-gold-2);
+            font-size: 1.2rem;
+            transition: transform var(--transition-fast);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all var(--transition-fast);
+        }
+        
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: var(--neutral-light);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .faq-answer ul {
+            color: var(--neutral-light);
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--neutral-light);
+            display: none;
+        }
+        
+        .no-results.show {
+            display: block;
+        }
+        
+        .contact-help {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .contact-help h3 {
+            color: var(--accent-gold-2);
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .faq-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .faq-category {
+                width: 100%;
+                max-width: 200px;
+                text-align: center;
+            }
+            
+            .faq-question {
+                padding: 1rem;
+            }
+            
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQ Header -->
+    <section class="faq-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our products and services</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="section">
+        <div class="container">
+            <div class="faq-content">
+                <!-- FAQ Search -->
+                <div class="faq-search">
+                    <h3>Search FAQ</h3>
+                    <div class="search-box">
+                        <input type="text" id="faqSearch" placeholder="Type your question here...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <!-- FAQ Categories -->
+                <div class="faq-categories">
+                    <div class="faq-category active" data-category="all">All Questions</div>
+                    <div class="faq-category" data-category="orders">Orders & Checkout</div>
+                    <div class="faq-category" data-category="shipping">Shipping & Delivery</div>
+                    <div class="faq-category" data-category="returns">Returns & Exchanges</div>
+                    <div class="faq-category" data-category="products">Products & Sizing</div>
+                    <div class="faq-category" data-category="account">Account & Website</div>
+                </div>
+
+                <!-- Orders & Checkout Section -->
+                <div class="faq-section" data-category="orders">
+                    <h2>Orders & Checkout</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I place an order?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To place an order:</p>
+                            <ul>
+                                <li>Browse our collections and select your desired items</li>
+                                <li>Choose your size and color options</li>
+                                <li>Click "Add to Cart" and continue shopping or proceed to checkout</li>
+                                <li>Enter your shipping and payment information</li>
+                                <li>Review your order and click "Complete Order"</li>
+                            </ul>
+                            <p>You'll receive an order confirmation email once your purchase is complete.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What payment methods do you accept?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept the following payment methods:</p>
+                            <ul>
+                                <li>Major credit cards (Visa, MasterCard, American Express, Discover)</li>
+                                <li>PayPal</li>
+                                <li>Apple Pay</li>
+                                <li>Google Pay</li>
+                            </ul>
+                            <p>All payments are processed securely through Stripe with SSL encryption.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I modify or cancel my order after placing it?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Orders can be modified or cancelled within 1 hour of placement. After this time, orders enter our fulfillment process and cannot be changed. To modify or cancel an order, please contact us immediately at <strong>orders@jaylataylor.com</strong> or call <strong>(555) 123-4567</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping & Delivery Section -->
+                <div class="faq-section" data-category="shipping">
+                    <h2>Shipping & Delivery</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How much does shipping cost?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Shipping costs depend on your location and chosen shipping method:</p>
+                            <ul>
+                                <li><strong>Standard Shipping:</strong> $25 (5-7 business days)</li>
+                                <li><strong>Express Shipping:</strong> $45 (2-3 business days)</li>
+                                <li><strong>Overnight Shipping:</strong> $75 (next business day)</li>
+                            </ul>
+                            <p><strong>Free shipping is available on orders over $500!</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I track my order?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Once your order ships, you'll receive a tracking confirmation email with a tracking number. You can track your package by:</p>
+                            <ul>
+                                <li>Clicking the tracking link in your confirmation email</li>
+                                <li>Visiting the carrier's website directly</li>
+                                <li>Contacting our customer service team</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you ship internationally?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We ship to over 50 countries worldwide. International shipping options include:</p>
+                            <ul>
+                                <li><strong>Standard International:</strong> $35 (7-14 business days)</li>
+                                <li><strong>Express International:</strong> $65 (3-7 business days)</li>
+                            </ul>
+                            <p>Please note that international customers are responsible for any customs duties and taxes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Returns & Exchanges Section -->
+                <div class="faq-section" data-category="returns">
+                    <h2>Returns & Exchanges</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your return policy?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day return policy for all items in original condition. Items must be:</p>
+                            <ul>
+                                <li>Unworn and unwashed</li>
+                                <li>In original packaging with all tags attached</li>
+                                <li>Swimwear must have hygiene strips intact</li>
+                                <li>Returned within 30 days of delivery</li>
+                            </ul>
+                            <p>For complete details, please visit our <a href="shipping-returns.html" style="color: var(--accent-gold-1);">Returns Policy</a> page.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I start a return or exchange?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To initiate a return or exchange:</p>
+                            <ul>
+                                <li>Contact us at <strong>returns@jaylataylor.com</strong> or call <strong>(555) 123-4567</strong></li>
+                                <li>Provide your order number and reason for return</li>
+                                <li>We'll email you a prepaid return shipping label</li>
+                                <li>Package your items and attach the return label</li>
+                                <li>Drop off at any authorized shipping location</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it take to process a refund?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Refunds are processed within 3-5 business days of receiving your returned items. The time it takes for the refund to appear in your account depends on your payment method:</p>
+                            <ul>
+                                <li><strong>Credit/Debit Cards:</strong> 3-5 business days</li>
+                                <li><strong>PayPal:</strong> Typically instant</li>
+                                <li><strong>Apple/Google Pay:</strong> 3-5 business days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products & Sizing Section -->
+                <div class="faq-section" data-category="products">
+                    <h2>Products & Sizing</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I know what size to order?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend checking our detailed <a href="size-guide.html" style="color: var(--accent-gold-1);">Size Guide</a> which includes:</p>
+                            <ul>
+                                <li>Measurement charts for all product categories</li>
+                                <li>How-to-measure instructions</li>
+                                <li>Fit notes for each product type</li>
+                                <li>Size conversion charts</li>
+                            </ul>
+                            <p>If you're still unsure, our customer service team can provide personalized sizing advice.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What materials are your products made from?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our products are crafted from high-quality materials:</p>
+                            <ul>
+                                <li><strong>Swimwear:</strong> 85% Nylon / 15% Spandex with embossed texture</li>
+                                <li><strong>Bucket Hats:</strong> 100% Polyester lightweight upholstery fabric</li>
+                                <li><strong>Linings:</strong> 100% Polyester for comfort and durability</li>
+                            </ul>
+                            <p>All fabric compositions are listed on individual product pages.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How should I care for my Jayla Taylor products?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Care instructions vary by product type:</p>
+                            <ul>
+                                <li><strong>Swimwear:</strong> Rinse in cold water after use, hand wash with mild detergent, lay flat to dry</li>
+                                <li><strong>Bucket Hats:</strong> Spot clean when needed, reshape while damp, air dry away from direct sunlight</li>
+                            </ul>
+                            <p>Detailed care instructions are included with each product and on product pages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account & Website Section -->
+                <div class="faq-section" data-category="account">
+                    <h2>Account & Website</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do I need to create an account to make a purchase?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, you can checkout as a guest. However, creating an account provides benefits like:</p>
+                            <ul>
+                                <li>Faster checkout for future orders</li>
+                                <li>Order history and tracking</li>
+                                <li>Wishlist functionality</li>
+                                <li>Exclusive offers and early sale access</li>
+                                <li>Account management and preferences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I reset my password?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To reset your password:</p>
+                            <ul>
+                                <li>Go to the login page and click "Forgot Password?"</li>
+                                <li>Enter your email address</li>
+                                <li>Check your email for reset instructions</li>
+                                <li>Follow the link to create a new password</li>
+                            </ul>
+                            <p>If you don't receive the reset email within 10 minutes, check your spam folder or contact us for assistance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I subscribe to your newsletter?</h3>
+                            <i class="fas fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can subscribe to our newsletter by:</p>
+                            <ul>
+                                <li>Entering your email in the newsletter signup form on our homepage</li>
+                                <li>Checking the newsletter opt-in during checkout</li>
+                                <li>Contacting our customer service team</li>
+                            </ul>
+                            <p>Newsletter subscribers receive exclusive offers, early access to new collections, and fashion updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults">
+                    <h3>No results found</h3>
+                    <p>We couldn't find any questions matching your search. Please try different keywords or browse our categories above.</p>
+                </div>
+
+                <!-- Contact Help Section -->
+                <div class="contact-help">
+                    <h3>Still Have Questions?</h3>
+                    <p>Can't find what you're looking for? Our customer service team is here to help!</p>
+                    <p>
+                        <strong>Email:</strong> support@jaylataylor.com<br>
+                        <strong>Phone:</strong> (555) 123-4567<br>
+                        <strong>Hours:</strong> Monday-Friday 9 AM - 6 PM EST
+                    </p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Military with a copyright &copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const faqCategories = document.querySelectorAll('.faq-category');
+            const faqSections = document.querySelectorAll('.faq-section');
+            const searchInput = document.getElementById('faqSearch');
+            const noResults = document.getElementById('noResults');
+
+            // FAQ Item Toggle
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').classList.remove('active');
+                    });
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+
+            // Category Filter
+            faqCategories.forEach(category => {
+                category.addEventListener('click', function() {
+                    const targetCategory = this.dataset.category;
+                    
+                    // Update active category
+                    faqCategories.forEach(cat => cat.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide sections
+                    faqSections.forEach(section => {
+                        if (targetCategory === 'all' || section.dataset.category === targetCategory) {
+                            section.classList.remove('hidden');
+                        } else {
+                            section.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Clear search and hide no results
+                    searchInput.value = '';
+                    noResults.classList.remove('show');
+                });
+            });
+
+            // Search Functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let hasResults = false;
+
+                if (searchTerm === '') {
+                    // Show all sections based on current category
+                    const activeCategory = document.querySelector('.faq-category.active').dataset.category;
+                    faqSections.forEach(section => {
+                        if (activeCategory === 'all' || section.dataset.category === activeCategory) {
+                            section.classList.remove('hidden');
+                        }
+                    });
+                    noResults.classList.remove('show');
+                    return;
+                }
+
+                // Search through FAQ items
+                faqSections.forEach(section => {
+                    const sectionItems = section.querySelectorAll('.faq-item');
+                    let sectionHasResults = false;
+
+                    sectionItems.forEach(item => {
+                        const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                        const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                        
+                        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                            item.style.display = 'block';
+                            sectionHasResults = true;
+                            hasResults = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Show/hide section based on results
+                    if (sectionHasResults) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+
+                // Show no results message if needed
+                if (!hasResults) {
+                    noResults.classList.add('show');
+                } else {
+                    noResults.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

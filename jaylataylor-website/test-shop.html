@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Debug Test</title>
+</head>
+<body>
+    <h1>Testing Shop Category Filter</h1>
+    <div id="output"></div>
+
+    <script>
+        // Test loading and filtering products
+        async function testShop() {
+            const output = document.getElementById('output');
+
+            try {
+                // Load products
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+
+                output.innerHTML += `<p>Total products loaded: ${data.products.length}</p>`;
+
+                // Filter for swim category
+                const swimProducts = data.products.filter(p => p.category === 'swim');
+                output.innerHTML += `<p>Swim products found: ${swimProducts.length}</p>`;
+
+                // Show swim product names
+                swimProducts.forEach(p => {
+                    output.innerHTML += `<p>- ${p.name} ($${p.price})</p>`;
+                });
+
+                // Check URL params
+                const urlParams = new URLSearchParams(window.location.search);
+                const categoryParam = urlParams.get('category');
+                output.innerHTML += `<p>URL category param: ${categoryParam || 'none'}</p>`;
+
+            } catch (error) {
+                output.innerHTML += `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+
+        testShop();
+    </script>
+</body>
+</html>

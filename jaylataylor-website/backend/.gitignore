@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Environment variables (CRITICAL - NEVER COMMIT!)
+.env
+.env.*
+!.env.example
+!.env.secure
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Build files
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+.vercel
+
+# Security files (NEVER COMMIT!)
+*.key
+*.pem
+*.cert
+*.crt
+private/
+secrets/
+
+# Session data
+sessions/
+*.session
+
+# Backup files
+*.backup
+*.bak
+*~

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop luxury fashion pieces by Jayla Taylor - Designer Lingerie, Swimwear & Timeless Collections">
+    <meta name="keywords" content="Jayla Taylor, Luxury Fashion, Designer Clothing">
+    
+    <title>Product Details - Jayla Taylor Fashion Designer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="shop.html">Shop</a>
+                <span>/</span>
+                <span id="breadcrumbCategory">Category</span>
+                <span>/</span>
+                <span id="breadcrumbProduct">Product</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail section">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainProductImage" src="" alt="Product Image" class="main-image">
+                            <button class="zoom-btn" id="zoomBtn">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                        <div class="thumbnail-images" id="thumbnailImages">
+                            <!-- Thumbnails will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-category" id="productCategory">Category</span>
+                        <h1 class="product-title" id="productTitle">Product Name</h1>
+                        <p class="product-price">$<span id="productPrice">0</span></p>
+                    </div>
+
+                    <div class="product-description" id="productDescription">
+                        <!-- Description will be loaded here -->
+                    </div>
+
+                    <!-- Product Options -->
+                    <form class="product-form" id="productForm">
+                        <!-- Color Selection -->
+                        <div class="product-option" id="colorOption" style="display: none;">
+                            <label class="option-label">Color</label>
+                            <div class="color-options" id="colorOptions">
+                                <!-- Color options will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Size Selection -->
+                        <div class="product-option" id="sizeOption" style="display: none;">
+                            <label class="option-label">
+                                Size
+                                <a href="#" class="size-guide-link" id="sizeGuideLink">Size Guide</a>
+                            </label>
+                            <div class="size-options" id="sizeOptions">
+                                <!-- Size options will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selection -->
+                        <div class="product-option">
+                            <label class="option-label">Quantity</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn minus" id="quantityMinus">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" max="10">
+                                <button type="button" class="quantity-btn plus" id="quantityPlus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stock Status -->
+                        <div class="stock-status" id="stockStatus">
+                            <i class="fas fa-check-circle"></i>
+                            <span>In Stock</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <button type="button" class="btn btn-primary btn-add-cart" id="addToCartBtn">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button type="button" class="btn btn-outline btn-buy-now" id="buyNowBtn">
+                                Buy Now
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Free shipping on orders over $500</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-undo"></i>
+                            <span>14-day returns</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure checkout</span>
+                        </div>
+                    </div>
+
+                    <!-- Share Options -->
+                    <div class="product-share">
+                        <span>Share:</span>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn" aria-label="Share on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="share-btn" aria-label="Share on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="share-btn" aria-label="Share on Pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a href="#" class="share-btn" aria-label="Share via Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="product-details-section">
+                <div class="details-tabs">
+                    <button class="tab-btn active" data-tab="details">Product Details</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                    <button class="tab-btn" data-tab="care">Care Instructions</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="details">
+                        <h3>Product Details</h3>
+                        <ul>
+                            <li>Premium quality materials</li>
+                            <li>Handcrafted with attention to detail</li>
+                            <li>Designed by Jayla Taylor</li>
+                            <li>Made in USA</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping Information</h3>
+                        <p>We offer worldwide shipping on all orders. Standard shipping takes 5-7 business days within the US and 10-14 business days internationally.</p>
+                        <h3>Returns Policy</h3>
+                        <p>We accept returns within 14 days of delivery for unworn items in original condition. Custom pieces are final sale.</p>
+                    </div>
+
+                    <div class="tab-pane" id="care">
+                        <h3>Care Instructions</h3>
+                        <ul>
+                            <li>Hand wash cold or dry clean only</li>
+                            <li>Do not bleach</li>
+                            <li>Lay flat to dry</li>
+                            <li>Cool iron if needed</li>
+                            <li>Store in a cool, dry place</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="product-grid" id="relatedProducts">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Modal -->
+    <div class="modal" id="sizeGuideModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Size Guide</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="size-guide-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>US</th>
+                            <th>Bust (in)</th>
+                            <th>Waist (in)</th>
+                            <th>Hips (in)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>0-2</td>
+                            <td>32-33</td>
+                            <td>24-25</td>
+                            <td>34-35</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>4-6</td>
+                            <td>34-35</td>
+                            <td>26-27</td>
+                            <td>36-37</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>8-10</td>
+                            <td>36-37</td>
+                            <td>28-29</td>
+                            <td>38-39</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>12-14</td>
+                            <td>38-40</td>
+                            <td>30-32</td>
+                            <td>40-42</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>16-18</td>
+                            <td>41-43</td>
+                            <td>33-35</td>
+                            <td>43-45</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="size-guide-note">
+                    <p><strong>Note:</strong> For the best fit, we recommend measuring yourself and comparing with the size chart. If you're between sizes, we suggest sizing up for comfort.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Military with a copyright &copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

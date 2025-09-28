@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Swim Products</title>
+    <style>
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; }
+        .product-card { border: 1px solid #ccc; padding: 10px; }
+        .product-image img { width: 100%; height: 200px; object-fit: cover; }
+        .debug { background: #f0f0f0; padding: 10px; margin: 20px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Testing Swim Category Products</h1>
+    <div class="debug" id="debug"></div>
+    <div class="product-grid" id="productGrid"></div>
+
+    <script>
+        const debug = document.getElementById('debug');
+        const productGrid = document.getElementById('productGrid');
+
+        async function testSwimProducts() {
+            try {
+                debug.textContent += 'Loading products.json...\n';
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+
+                debug.textContent += `Total products: ${data.products.length}\n`;
+
+                // Filter for swim products
+                const swimProducts = data.products.filter(p => p.category === 'swim');
+                debug.textContent += `Swim products found: ${swimProducts.length}\n\n`;
+
+                // Display each swim product
+                swimProducts.forEach(product => {
+                    debug.textContent += `Product: ${product.name} (${product.id})\n`;
+                    debug.textContent += `  Price: $${product.price}\n`;
+                    debug.textContent += `  Images: ${product.images ? product.images.length : 0}\n`;
+
+                    // Create product card
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+
+                    const fallbackImage = 'https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/HANGTAG1_dcne9m?_a=BAMAK+cc0';
+                    const productImage = product.images && product.images[0] ? product.images[0] : fallbackImage;
+
+                    card.innerHTML = `
+                        <div class="product-image">
+                            <img src="${productImage}" alt="${product.name}"
+                                 onerror="this.onerror=null; this.src='${fallbackImage}'">
+                        </div>
+                        <h3>${product.name}</h3>
+                        <p>$${product.price}</p>
+                        <p>Category: ${product.category}</p>
+                    `;
+
+                    productGrid.appendChild(card);
+                    debug.textContent += `  Card created and added to grid\n\n`;
+                });
+
+            } catch (error) {
+                debug.textContent += `ERROR: ${error.message}\n`;
+                console.error(error);
+            }
+        }
+
+        // Run test
+        testSwimProducts();
+
+        // Also check URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        debug.textContent += `URL category param: ${category || 'none'}\n\n`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>Final Test</title></head>
+<body>
+<h1>Final Test - Swim Products</h1>
+<div id="productGrid"></div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked></label>
+  <label><input type="checkbox" value="swim"></label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+
+<pre id="log" style="background:#f0f0f0; padding:10px;"></pre>
+
+<script>
+// Capture all console output
+const log = document.getElementById('log');
+['log', 'error', 'warn'].forEach(method => {
+  const original = console[method];
+  console[method] = function(...args) {
+    original.apply(console, args);
+    log.textContent += `[${method.toUpperCase()}] ${args.join(' ')}\n`;
+  };
+});
+
+// Track JS errors
+window.onerror = function(msg, url, line) {
+  log.textContent += `[JS ERROR] ${msg} at ${url}:${line}\n`;
+  return false;
+};
+</script>
+
+<script src="js/cloudinary-mapper.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

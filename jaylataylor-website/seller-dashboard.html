@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - PRSM Tech Marketplace</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .dashboard-header {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .dashboard-title {
+            color: var(--accent-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .dashboard-subtitle {
+            color: var(--white);
+            opacity: 0.9;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .dashboard-card {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .card-content {
+            color: var(--secondary-dark);
+        }
+        
+        .connect-button {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .connect-button:hover {
+            background: var(--accent-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background: #d4f4dd;
+            color: #1e7e34;
+        }
+        
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1rem;
+            margin-top: 1rem;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: var(--secondary-dark);
+        }
+        
+        .info-value {
+            color: #666;
+        }
+        
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .alert-success {
+            background: #d4f4dd;
+            color: #1e7e34;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .balance-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 1rem 0;
+        }
+        
+        .balance-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary-dark);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loading.active {
+            display: block;
+        }
+        
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--accent-gold);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="seller-dashboard.html" class="nav-link active">Seller Dashboard</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Seller Dashboard</h1>
+            <p class="dashboard-subtitle">Manage your products and track sales on PRSM Tech Marketplace</p>
+        </div>
+
+        <!-- Alerts -->
+        <div id="alertContainer"></div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Account Status Card -->
+            <div class="dashboard-card">
+                <h2 class="card-title">Account Status</h2>
+                <div class="card-content">
+                    <div id="accountStatusContent">
+                        <p>Connect your Stripe account to start selling</p>
+                        <button class="connect-button" id="connectStripeBtn">
+                            <i class="fab fa-stripe"></i>
+                            Connect with Stripe
+                        </button>
+                    </div>
+                    <div class="loading" id="statusLoading">
+                        <div class="spinner"></div>
+                        <p>Loading account status...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Balance Card -->
+            <div class="dashboard-card">
+                <h2 class="card-title">Balance</h2>
+                <div class="card-content">
+                    <div id="balanceContent">
+                        <p class="balance-label">Available Balance</p>
+                        <p class="balance-amount">$0.00</p>
+                        <p class="balance-label">Pending Balance</p>
+                        <p class="balance-amount">$0.00</p>
+                    </div>
+                    <div class="loading" id="balanceLoading">
+                        <div class="spinner"></div>
+                        <p>Loading balance...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions Card -->
+            <div class="dashboard-card">
+                <h2 class="card-title">Quick Actions</h2>
+                <div class="card-content">
+                    <div class="action-buttons">
+                        <button class="btn-secondary" id="viewDashboardBtn" disabled>
+                            <i class="fas fa-chart-line"></i>
+                            Stripe Dashboard
+                        </button>
+                        <button class="btn-secondary" id="updateAccountBtn" disabled>
+                            <i class="fas fa-user-edit"></i>
+                            Update Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Platform Information -->
+        <div class="dashboard-card">
+            <h2 class="card-title">Platform Information</h2>
+            <div class="card-content">
+                <div class="info-grid">
+                    <span class="info-label">Platform Fee:</span>
+                    <span class="info-value">10% per transaction</span>
+                    
+                    <span class="info-label">Payment Processing:</span>
+                    <span class="info-value">Stripe (2.9% + $0.30 per transaction)</span>
+                    
+                    <span class="info-label">Payout Schedule:</span>
+                    <span class="info-value">Daily automatic transfers</span>
+                    
+                    <span class="info-label">Support Email:</span>
+                    <span class="info-value">support@prsmtech.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PRSM Tech Marketplace</h3>
+                    <p>Empowering sellers with seamless payment processing</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="seller-dashboard.html">Seller Dashboard</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PRSM Tech. All rights reserved.</p>
+                <p>Powered by Stripe Connect</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/stripe-connect.js"></script>
+</body>
+</html>

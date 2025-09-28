@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudinary Asset Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+        }
+        .folder {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .folder-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .folder-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #444;
+        }
+        .folder-meta {
+            color: #666;
+            font-size: 14px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .image-card {
+            background: #fafafa;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .image-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .image-info {
+            padding: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+        .image-name {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Cloudinary Asset Gallery</h1>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value">1</div>
+                <div class="stat-label">Total Folders</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">356</div>
+                <div class="stat-label">Total Assets</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">614 MB</div>
+                <div class="stat-label">Total Size</div>
+            </div>
+        </div>
+
+        
+            <div class="folder">
+                <div class="folder-header">
+                    <div class="folder-title">📁 root</div>
+                    <div class="folder-meta">
+                        356 items • 614.36 MB
+                    </div>
+                </div>
+                <div class="image-grid">
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6352_1_grc8ek?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6352_1_grc8ek?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6352_1_grc8ek" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6352_1_grc8ek</div>
+                                <div>1188×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6350_r5m9u7?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6350_r5m9u7?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6350_r5m9u7" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6350_r5m9u7</div>
+                                <div>1198×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6350_1_hzzrma?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6350_1_hzzrma?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6350_1_hzzrma" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6350_1_hzzrma</div>
+                                <div>1198×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6321_hvc85g?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6321_hvc85g?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6321_hvc85g" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6321_hvc85g</div>
+                                <div>1194×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6259_1_nladuo?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6259_1_nladuo?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6259_1_nladuo" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6259_1_nladuo</div>
+                                <div>1182×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6254_bs56uj?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6254_bs56uj?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6254_bs56uj" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6254_bs56uj</div>
+                                <div>1182×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6254_1_wkfih1?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6254_1_wkfih1?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6254_1_wkfih1" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6254_1_wkfih1</div>
+                                <div>1182×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6247_aj3s76?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6247_aj3s76?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6247_aj3s76" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6247_aj3s76</div>
+                                <div>1195×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6247_1_btbjww?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6247_1_btbjww?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6247_1_btbjww" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6247_1_btbjww</div>
+                                <div>1195×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6246_fata2q?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6246_fata2q?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6246_fata2q" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6246_fata2q</div>
+                                <div>1182×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6246_1_ypow2p?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6246_1_ypow2p?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6246_1_ypow2p" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6246_1_ypow2p</div>
+                                <div>1182×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                        <div class="image-card" onclick="openModal('https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/Jayla_Taylor_Low_Res_M44B6205_zfyutl?_a=BAMAK+cc0')">
+                            <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/Jayla_Taylor_Low_Res_M44B6205_zfyutl?_a=BAMAK+cc0" alt="Jayla_Taylor_Low_Res_M44B6205_zfyutl" loading="lazy">
+                            <div class="image-info">
+                                <div class="image-name">Jayla_Taylor_Low_Res_M44B6205_zfyutl</div>
+                                <div>1195×1792 • JPG</div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div style="text-align: center; margin-top: 15px; color: #666;">... and 344 more</div>
+            </div>
+        
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal').classList.add('active');
+            document.getElementById('modal-img').src = src;
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

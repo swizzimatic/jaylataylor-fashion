@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Fashion Week 2023 - Jayla Taylor</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">NYC Fashion Week 2023</h1>
+            <p class="hero-subtitle">Behind the Scenes & Runway Moments</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="runway">Runway</button>
+                <button class="filter-btn" data-filter="backstage">Backstage</button>
+                <button class="filter-btn" data-filter="models">Models</button>
+                <button class="filter-btn" data-filter="details">Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- NYC Fashion Week 2023 Gallery Items -->
+                
+                <!-- Event Documentation -->
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/1668260131_sxvict?_a=BAMAK+cc0" alt="NYC Fashion Week 2023">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06143_fziczv?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06220_pnoyfo?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06231_jiiqhr?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06310_aigvaa?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06317_zrwjgm?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06347_iya1gg?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <!-- Behind-the-Scenes Photography -->
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8044_zbsvqs?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8045_tuz8lf?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8046_feuju8?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8047_jmqb7w?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8048_ximob9?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8049_bql3bd?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8050_jj9mim?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+
+                <!-- Professional Event Photography -->
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8124_r7fod7?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8125_dyxnv2?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8126_posepa?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8127_1_jy5n7f?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8129_pigoo0?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8130_t08ve8?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8131_cizdsx?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8132_kiwsij?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8133_nhavia?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8134_t6wp4k?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8136_mtwcyc?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8137_kj3rip?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8138_1_olhatf?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8140_tzqseo?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8141_kmyiz7?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8142_kaquog?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8143_rgtxkd?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8144_fjhowc?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8145_bu4vz8?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8146_trbz2m?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8147_kv43jt?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8148_oyaq1c?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8149_uxxi83?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8150_rftymg?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8151_hgnllj?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8152_ymrnle?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8153_oshxl0?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8154_mxu1n0?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8155_kgtj8p?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8156_sd1ljw?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8157_amahuh?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8158_zsoqbz?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8159_sry3lt?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8160_vvnjjd?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="details">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8161_jf9y8f?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Details">
+                </div>
+
+                <div class="gallery-item" data-category="models">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8162_wwq1jh?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Models">
+                </div>
+
+                <div class="gallery-item" data-category="runway">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8163_x0v1va?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Runway">
+                </div>
+
+                <div class="gallery-item" data-category="backstage">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8164_dkdn61?_a=BAMAK+cc0" alt="NYC Fashion Week 2023 Backstage">
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button class="btn btn-outline" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Highlights Section -->
+    <section class="section" style="background-color: var(--secondary-dark);">
+        <div class="container">
+            <h2 class="text-center">NYC Fashion Week 2023 Highlights</h2>
+            <p class="text-center" style="color: var(--accent-gold-2); margin-bottom: 3rem;">
+                Key moments and standout pieces from the New York Fashion Week 2023 showcase
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <div class="highlight-card" style="text-align: center; padding: 30px; background-color: var(--primary-dark); border-radius: 4px;">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/DSC06138_ssada2?_a=BAMAK+cc0" alt="Featured Look 1" style="width: 100%; border-radius: 4px; margin-bottom: 20px;">
+                    <h3 style="color: var(--accent-gold-2); margin-bottom: 10px;">Professional Photography</h3>
+                    <p>High-quality runway documentation capturing the essence of each design with professional precision.</p>
+                </div>
+                
+                <div class="highlight-card" style="text-align: center; padding: 30px; background-color: var(--primary-dark); border-radius: 4px;">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8127_1_jy5n7f?_a=BAMAK+cc0" alt="Featured Look 2" style="width: 100%; border-radius: 4px; margin-bottom: 20px;">
+                    <h3 style="color: var(--accent-gold-2); margin-bottom: 10px;">Designer Vision</h3>
+                    <p>Showcasing the creative process and artistic vision behind each carefully crafted piece.</p>
+                </div>
+                
+                <div class="highlight-card" style="text-align: center; padding: 30px; background-color: var(--primary-dark); border-radius: 4px;">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8156_sd1ljw?_a=BAMAK+cc0" alt="Featured Look 3" style="width: 100%; border-radius: 4px; margin-bottom: 20px;">
+                    <h3 style="color: var(--accent-gold-2); margin-bottom: 10px;">Fashion Excellence</h3>
+                    <p>Representing the pinnacle of fashion design with sophisticated silhouettes and impeccable craftsmanship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

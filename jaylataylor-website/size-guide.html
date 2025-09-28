@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Size Guide - Jayla Taylor Fashion">
+    <meta name="keywords" content="Jayla Taylor Size Guide, Sizing Chart, Measurements">
+    
+    <title>Size Guide - Jayla Taylor Fashion Designer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Size Guide Styles */
+        .size-header {
+            background-color: var(--secondary-dark);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .size-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold-2);
+        }
+        
+        .size-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .size-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .size-tab {
+            background-color: var(--secondary-dark);
+            border: 1px solid var(--accent-gold-2);
+            color: var(--neutral-light);
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border-radius: 4px;
+        }
+        
+        .size-tab:hover,
+        .size-tab.active {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+        }
+        
+        .size-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .size-section.active {
+            display: block;
+        }
+        
+        .size-section h2 {
+            color: var(--accent-gold-2);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background-color: var(--secondary-dark);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .size-table th {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .size-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--primary-dark);
+            color: var(--neutral-light);
+        }
+        
+        .size-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .size-table tr:nth-child(even) {
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+        
+        .measurement-tips {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .measurement-tips h3 {
+            color: var(--accent-gold-2);
+            margin-bottom: 1rem;
+        }
+        
+        .measurement-tips ul {
+            padding-left: 1.5rem;
+        }
+        
+        .measurement-tips li {
+            margin-bottom: 0.75rem;
+            color: var(--neutral-light);
+            line-height: 1.6;
+        }
+        
+        .fit-notes {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .fit-notes h4 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .size-visual {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .size-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .size-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .size-tab {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .size-table {
+                font-size: 0.875rem;
+            }
+            
+            .size-table th,
+            .size-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Size Guide Header -->
+    <section class="size-header">
+        <div class="container">
+            <h1>Size Guide</h1>
+            <p>Find your perfect fit with our comprehensive sizing charts</p>
+        </div>
+    </section>
+
+    <!-- Size Guide Content -->
+    <section class="section">
+        <div class="container">
+            <div class="size-content">
+                <!-- Size Guide Tabs -->
+                <div class="size-tabs">
+                    <div class="size-tab active" data-tab="swimwear">Swimwear</div>
+                    <div class="size-tab" data-tab="accessories">Accessories</div>
+                    <div class="size-tab" data-tab="general">General Fit Guide</div>
+                </div>
+
+                <!-- Swimwear Size Guide -->
+                <div class="size-section active" id="swimwear">
+                    <h2>Swimwear Size Guide</h2>
+                    
+                    <div class="measurement-tips">
+                        <h3>How to Measure for Swimwear</h3>
+                        <ul>
+                            <li><strong>Bust:</strong> Measure around the fullest part of your bust, keeping the tape measure level</li>
+                            <li><strong>Waist:</strong> Measure around your natural waistline, typically the narrowest part of your torso</li>
+                            <li><strong>Hips:</strong> Measure around the fullest part of your hips, typically 8-9 inches below your waist</li>
+                            <li><strong>Underbust:</strong> Measure directly under your bust, around your ribcage</li>
+                        </ul>
+                    </div>
+
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Bust (inches)</th>
+                                <th>Waist (inches)</th>
+                                <th>Hips (inches)</th>
+                                <th>Underbust (inches)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>XS</strong></td>
+                                <td>30-32</td>
+                                <td>24-26</td>
+                                <td>34-36</td>
+                                <td>26-28</td>
+                            </tr>
+                            <tr>
+                                <td><strong>S</strong></td>
+                                <td>32-34</td>
+                                <td>26-28</td>
+                                <td>36-38</td>
+                                <td>28-30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td>34-36</td>
+                                <td>28-30</td>
+                                <td>38-40</td>
+                                <td>30-32</td>
+                            </tr>
+                            <tr>
+                                <td><strong>L</strong></td>
+                                <td>36-38</td>
+                                <td>30-32</td>
+                                <td>40-42</td>
+                                <td>32-34</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XL</strong></td>
+                                <td>38-40</td>
+                                <td>32-34</td>
+                                <td>42-44</td>
+                                <td>34-36</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1X</strong></td>
+                                <td>40-42</td>
+                                <td>34-36</td>
+                                <td>44-46</td>
+                                <td>36-38</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="fit-notes">
+                        <h4>Swimwear Fit Notes:</h4>
+                        <p>Our swimwear is designed with a luxurious embossed texture and offers medium support. The pieces are true to size with slight stretch. For the most comfortable fit, we recommend choosing your regular size. If you prefer a looser fit or are between sizes, consider sizing up.</p>
+                    </div>
+                </div>
+
+                <!-- Accessories Size Guide -->
+                <div class="size-section" id="accessories">
+                    <h2>Accessories Size Guide</h2>
+                    
+                    <h3>Bucket Hats</h3>
+                    <div class="measurement-tips">
+                        <h4>How to Measure Your Head</h4>
+                        <ul>
+                            <li>Use a flexible measuring tape or string</li>
+                            <li>Measure around your head, about 1 inch above your eyebrows</li>
+                            <li>The tape should sit comfortably, not too tight or loose</li>
+                            <li>For the most accurate measurement, have someone help you</li>
+                        </ul>
+                    </div>
+
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Head Circumference (inches)</th>
+                                <th>Head Circumference (cm)</th>
+                                <th>Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>S</strong></td>
+                                <td>21.5 - 22.5</td>
+                                <td>54.5 - 57</td>
+                                <td>Smaller heads, teens</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td>22.5 - 23.5</td>
+                                <td>57 - 59.5</td>
+                                <td>Most adults, average fit</td>
+                            </tr>
+                            <tr>
+                                <td><strong>L</strong></td>
+                                <td>23.5 - 24.5</td>
+                                <td>59.5 - 62</td>
+                                <td>Larger heads, looser fit preference</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="fit-notes">
+                        <h4>Bucket Hat Fit Notes:</h4>
+                        <p>Our bucket hats feature a relaxed, unstructured design that sits comfortably on the head. The lightweight upholstery fabric provides structure while remaining breathable. Most customers find their regular hat size fits perfectly.</p>
+                    </div>
+                </div>
+
+                <!-- General Fit Guide -->
+                <div class="size-section" id="general">
+                    <h2>General Fit Guide</h2>
+                    
+                    <div class="measurement-tips">
+                        <h3>Finding Your Perfect Fit</h3>
+                        <ul>
+                            <li><strong>Know Your Measurements:</strong> Always measure yourself before ordering. Body measurements are more accurate than garment sizes from other brands</li>
+                            <li><strong>Consider the Fabric:</strong> Our embossed swimwear has slight stretch, while our bucket hats are structured but comfortable</li>
+                            <li><strong>Read Product Descriptions:</strong> Each product page includes specific fit details and fabric information</li>
+                            <li><strong>When in Doubt:</strong> Contact our customer service team for personalized sizing advice</li>
+                        </ul>
+                    </div>
+
+                    <div class="fit-notes">
+                        <h4>Size Conversion Chart</h4>
+                        <table class="size-table" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                    <th>International</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>6</td>
+                                    <td>32</td>
+                                    <td>XS</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>8-10</td>
+                                    <td>34-36</td>
+                                    <td>S</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>12-14</td>
+                                    <td>38-40</td>
+                                    <td>M</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>16-18</td>
+                                    <td>42-44</td>
+                                    <td>L</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>20-22</td>
+                                    <td>46-48</td>
+                                    <td>XL</td>
+                                </tr>
+                                <tr>
+                                    <td>1X</td>
+                                    <td>24</td>
+                                    <td>50</td>
+                                    <td>XXL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="measurement-tips">
+                        <h3>Care Instructions for Optimal Fit</h3>
+                        <ul>
+                            <li><strong>Swimwear:</strong> Rinse in cold water after each use, hand wash with mild detergent, lay flat to dry</li>
+                            <li><strong>Bucket Hats:</strong> Spot clean when needed, reshape while damp, air dry away from direct sunlight</li>
+                            <li><strong>Storage:</strong> Store swimwear flat, hang bucket hats to maintain shape</li>
+                        </ul>
+                    </div>
+
+                    <div class="fit-notes">
+                        <h4>Still Need Help?</h4>
+                        <p>Our customer service team is here to help you find the perfect fit. Contact us at <strong>info@jaylataylor.com</strong> or call <strong>(555) 123-4567</strong> for personalized sizing assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Military with a copyright &copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Size Guide Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.size-tab');
+            const sections = document.querySelectorAll('.size-section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Remove active class from all tabs and sections
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding section
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

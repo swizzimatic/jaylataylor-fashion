@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Jayla Taylor</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Professional Gallery</h1>
+            <p class="hero-subtitle">A Visual Journey Through Fashion</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-categories">
+        <div class="container">
+            <h2 class="section-title">Explore Collections</h2>
+            <div class="category-grid">
+                <a href="#timeless" class="category-card" data-collection="timeless">
+                    <div class="category-image">
+                        <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_High_Res_M44B6352_ne1lvm?_a=BAMAK+cc0" alt="Timeless Collection">
+                        <div class="category-overlay">
+                            <h3>Timeless Collection</h3>
+                            <p>Classic Elegance Redefined</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#collaborative" class="category-card" data-collection="collaborative">
+                    <div class="category-image">
+                        <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1999_em10kg?_a=BAMAK+cc0" alt="Collaborative Work">
+                        <div class="category-overlay">
+                            <h3>Collaborative Work</h3>
+                            <p>Creative Partnerships</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#magazine-features" class="category-card" data-collection="magazine">
+                    <div class="category-image">
+                        <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7805_wljl1z?_a=BAMAK+cc0" alt="Magazine Features">
+                        <div class="category-overlay">
+                            <h3>Magazine Features</h3>
+                            <p>Editorial Publications</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Gallery -->
+    <section class="gallery-section" id="fullGallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">All Photography</h2>
+                <div class="gallery-controls">
+                    <select class="gallery-sort" id="gallerySort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="collection">By Collection</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="masonry-grid" id="masonryGrid">
+                <!-- Timeless Collection -->
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://jaylataylor.com/content/Timeless%20Collection/AV0A1084_1.jpeg" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Heritage Glamour</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/AV0A1098_1_fbsdtm?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Classic Sophistication</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/AV0A1124_1_iqxeeh?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Eternal Elegance</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_High_Res_M44B6112_kki3ic?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Modern Classic</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_High_Res_M44B6149_yscbqj?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Refined Beauty</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_High_Res_M44B6352_ne1lvm?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Signature Style</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_High_Res_M44B6424_tk3ihp?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Couture Excellence</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="timeless">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6246_fata2q?_a=BAMAK+cc0" alt="Timeless Collection">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Artistic Vision</h3>
+                            <p>Timeless Collection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collaborative Work -->
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/229F0CE6-96C9-4F9A-B1E5-CB1BB5FFED69_qedt5e?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Creative Partnership</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://jaylataylor.com/content/Collaborative%20Work/astorm_04.jpg" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Storm Collection</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_0872_jawfpg?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Editorial</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1087_pcwjbt?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Designer Collaboration</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1999_em10kg?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Studio Session</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_9814_gadj70?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Professional Photography</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_9843_lk3r23?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Portfolio</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="collaborative">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_4553_ak8ha1?_a=BAMAK+cc0" alt="Collaborative Work">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Creative Direction</h3>
+                            <p>Collaborative Work</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Magazine Features -->
+                <div id="magazine-features" class="magazine-features-section"></div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7805_wljl1z?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Editorial</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5888_v0t0h9?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Press Coverage</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8715_cs3wyq?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Media Spotlight</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_7442_czx6du?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Featured Story</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-207_vogbm4?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Runway Feature</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_3996_e6kgxk?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Editorial Portrait</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8173_dyzbuh?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Publication Feature</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2265_obnrlx?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Moment</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5893_y81xs2?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Cover Story</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1087_sqsqhj?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Designer Profile</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8713_lftcmx?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Style Feature</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5895_anfcvi?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Spread</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2926_wq0hp9?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Exclusive Interview</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5890_1_ylxgc0?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Collection Preview</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_4047_fveryd?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Behind the Brand</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://jaylataylor.com/content/Magazine%20features/IMG_8712.PNG" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Forward</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5881_1_kge2iz?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Designer Spotlight</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_5882_fjljyz?_a=BAMAK+cc0" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Trend Report</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://jaylataylor.com/content/Magazine%20features/IMG_8710.PNG" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Style Icon</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item" data-collection="magazine">
+                    <img src="https://jaylataylor.com/content/Magazine%20features/IMG_8711.PNG" alt="Magazine Features">
+                    <div class="masonry-overlay">
+                        <div class="masonry-info">
+                            <h3>Fashion Week Coverage</h3>
+                            <p>Magazine Features</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More -->
+            <div class="gallery-load-more">
+                <button class="btn btn-outline" id="loadMoreGallery">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="video-showcase" style="padding: 4rem 0; background-color: var(--secondary-dark);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white); text-align: center; margin-bottom: 3rem;">Exclusive Content</h2>
+            
+            
+            <!-- Behind the Scenes Video -->
+            <div class="video-container" style="max-width: 800px; margin: 0 auto;">
+                <h3 style="color: var(--gold-primary); text-align: center; margin-bottom: 1.5rem;">Behind the Scenes</h3>
+                <video controls poster="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_4047_fveryd?_a=BAMAK+cc0" class="gallery-video" style="width: 100%; border-radius: 8px;">
+                    <source src="https://jaylataylor.com/content/Collaborative%20Work/test_3.mov.mov" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video. <a href="https://jaylataylor.com/content/Collaborative%20Work/test_3.mov.mov">Download the video</a> instead.</p>
+                </video>
+                <div class="video-info" style="text-align: center; margin-top: 1.5rem;">
+                    <p style="color: var(--white); opacity: 0.8;">Exclusive behind-the-scenes footage from our latest collaborative project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+1.  https://jaylataylor.com//assets/images/pic1.jpeg
+
+2.  https://jaylataylor.com//assets/images/pic2.jpeg
+
+3.  https://jaylataylor.com//assets/images/pic3.jpeg
+
+4.  https://jaylataylor.com//assets/images/pic4.jpeg
+
+5.  https://jaylataylor.com//assets/images/pic5.jpeg
+
+6.  https://jaylataylor.com//assets/images/pic6.jpeg
+
+7.  https://jaylataylor.com//assets/images/pic7.jpeg
+
+
+
+
+1.    Product Name	Description	Price	Fabric Content	Sizes	Color Options
+Skyline Unisex Bucket Hat – Baby Blue	Top off your look with the effortlessly cool Skyline Bucket Hat in a soft baby blue. Designed for all, this unisex essential combines comfort and style with a relaxed silhouette and breathable fabric. Perfect for sunny days, city strolls, or laid-back weekends.	$35	Shell: Textured woven (65% Cotton, 35% Polyester) – Lightweight yet structured for everyday edge and comfort.
+Lining: 100% Polyester	S, M, L	N/A
+
+
+2.  The Capri Bucket Hat – Sunset Stripe in Multi	Bright, bold, and endlessly wearable — The Capri Bucket Hat is a lightweight statement piece designed to turn heads. Made from a textured upholstery-inspired fabric, it features vertical stripes in deep orange, lavender, deep pink, olive, light green, and tan, reminiscent of warm sunsets and coastal escapes. Fully lined with soft polyester for a comfortable fit, this unisex bucket hat brings color and character to any look.	$35	Shell: 100% Polyester Lightweight Upholstery Fabric
+Lining: 100% Polyester	S, M, L	Multi (deep orange, lavender, deep pink, olive, light green, tan)
+
+
+3.  The Mercer Bucket Hat – Black, Tan & Grey	Elevate your everyday with our Textured Tweed Bucket Hat, a unisex staple crafted for bold subtlety. Featuring a unique blend of black, tan, and grey in an upholstery-inspired tweed fabric, this piece brings structure and edge to any look. Fully lined with smooth polyester for comfort and durability, it’s perfect for transitional weather, day-to-night wear, or adding a textured twist to your essentials.	$40	Shell: 100% Polyester Lightweight Upholstery Fabric
+Lining: 100% Polyester	S, M, L	Black, Tan & Grey
+
+
+4.  The Rue Bucket Hat – Embroidered Postcard Print in Light Blue, Olive & Tan	The Rue Bucket Hat captures the essence of travel, nostalgia, and effortless style. Designed in a lightly textured upholstery-inspired fabric, this unisex piece features an embroidered Paris print with vintage-style postcards and stamps in soft tones of light blue, olive, and tan. Fully lined with smooth polyester for a comfortable fit, it’s a wearable souvenir of timeless charm.	$35	Shell: 100% Polyester Lightweight Upholstery Fabric
+Lining: 100% Polyester	S, M, L	Light Blue, Olive & Tan (with embroidered Paris postcard print)
+
+
+5.  The Valencia Bucket Hat – Paisley Tapestry in Blue & Gold	The Valencia Bucket Hat blends vintage charm with modern edge. Crafted from a richly textured tweed upholstery fabric, it features a striking floral-paisley inspired print in light blue, navy, mustard yellow, and gold. This unisex piece adds bold personality and timeless texture to any look. Fully lined with smooth polyester for all-day comfort and structure.	$45	Shell: 100% Polyester Lightweight Upholstery Fabric
+Lining: 100% Polyester	S, M, L	Blue & Gold (with floral-paisley print in light blue, navy, mustard yellow, and gold)
+
+
+6.  Siren Cutout One-Piece	Make waves in the Siren Cutout One-Piece, designed to turn heads with its bold silhouette and luxe texture. This asymmetrical halter suit features a sleek center ring detail, striking side cutouts, and a high-cut leg for an elongated, confident fit. Whether poolside or beach-bound, this statement piece balances edge and elegance effortlessly.	$60	Shell: 85% Nylon / 15% Spandex – embossed with a faux-crocodile texture for a rich, dimensional finish
+Lining: 82% Polyester / 18% Spandex – smooth, breathable, and supportive	XS, S, M, L, XL, 1X	Ocean Obsidian (formerly turquoise), Crimson Noir (formerly burgundy), Midnight Depths (formerly navy)
+
+
+7.  Isla Textured Bikini Set	The Isla Textured Bikini Set brings effortless sophistication to swimwear. Featuring a luxe embossed finish, the halter-style top offers a flattering crisscross neckline for added support and lift. Paired with adjustable tie-side bottoms, this set blends comfort with sleek, sculpted style. Perfect for sun-drenched escapes or rooftop lounging, this piece embodies elevated swim with a touch of edge.	Top: $35
+Bottom: $30	Shell: 85% Nylon / 15% Spandex – embossed with a faux-crocodile texture for a rich, dimensional finish
+Lining: 82% Polyester / 18% Spandex – smooth, breathable, and supportive	XS, S, M, L, XL, 1X	Ocean Obsidian (formerly turquoise), Crimson Noir (formerly burgundy), Midnight Depths (form

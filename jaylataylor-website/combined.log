@@ -1,0 +1,12 @@
+{"level":"error","message":"Missing required environment variables: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, JWT_SECRET","service":"jaylataylor-backend"}
+{"level":"error","message":"Please check your .env file","service":"jaylataylor-backend"}
+{"level":"info","message":"Generated JWT_SECRET example: 317f2279854b5e05fb108443d91f8226328a69a49c8d1f2a2877510e53e869f3559248bb22c24cfdb6613ea68749e4868445cbfb5a1fa172ca9ca19f3b45b273","service":"jaylataylor-backend"}
+{"level":"info","message":"Add this to your .env file: JWT_SECRET=317f2279854b5e05fb108443d91f8226328a69a49c8d1f2a2877510e53e869f3559248bb22c24cfdb6613ea68749e4868445cbfb5a1fa172ca9ca19f3b45b273","service":"jaylataylor-backend"}
+{"level":"info","message":"🔐 Serverless mode - app exported for Vercel","service":"jaylataylor-backend"}
+{"level":"info","message":"🛡️ Environment: development","service":"jaylataylor-backend"}
+{"level":"error","message":"Missing required environment variables: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, JWT_SECRET","service":"jaylataylor-backend"}
+{"level":"error","message":"Please check your .env file or Vercel environment variables","service":"jaylataylor-backend"}
+{"level":"info","message":"Generated JWT_SECRET example: ab59c932c83b26a96d9dd378fddcd62f7d7794575d40612d53b9d89ae8f13d74e73a9e8d3816adbe722ad4ff80c32838b6d9ac6d25230dd08b7ad09916725799","service":"jaylataylor-backend"}
+{"level":"info","message":"Add this to your .env file: JWT_SECRET=ab59c932c83b26a96d9dd378fddcd62f7d7794575d40612d53b9d89ae8f13d74e73a9e8d3816adbe722ad4ff80c32838b6d9ac6d25230dd08b7ad09916725799","service":"jaylataylor-backend"}
+{"level":"info","message":"🔐 Serverless mode - app exported for Vercel","service":"jaylataylor-backend"}
+{"level":"info","message":"🛡️ Environment: development","service":"jaylataylor-backend"}

@@ -1,0 +1,14 @@
+{
+  "name": "jaylataylor-website",
+  "version": "1.0.0",
+  "description": "Jayla Taylor Fashion Portfolio and E-commerce",
+  "main": "api/index.js",
+  "dependencies": {
+    "serverless-http": "^3.2.0"
+  },
+  "scripts": {
+    "dev": "cd backend && npm run dev",
+    "start": "cd backend && npm start",
+    "build": "echo 'Static site - no build needed'"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "bucket-hats",
+      "name": "Bucket Hats",
+      "description": "Stylish unisex bucket hats for every occasion"
+    },
+    {
+      "id": "swim",
+      "name": "Swim Collection",
+      "description": "Designer swimwear that embodies elegance and confidence"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-001",
+      "name": "Skyline Unisex Bucket Hat – Baby Blue",
+      "category": "bucket-hats",
+      "price": 35,
+      "description": "Top off your look with the effortlessly cool Skyline Bucket Hat in a soft baby blue. Designed for all, this unisex essential combines comfort and style with a relaxed silhouette and breathable fabric. Perfect for sunny days, city strolls, or laid-back weekends.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Baby Blue"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214289/pic1_h8nfpa.jpg"
+      ],
+      "featured": true,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "Textured woven | 65% Cotton, 35% Polyester",
+        "lining": "100% Polyester"
+      }
+    },
+    {
+      "id": "prod-002",
+      "name": "The Capri Bucket Hat – Sunset Stripe in Multi",
+      "category": "bucket-hats",
+      "price": 35,
+      "description": "Bright, bold, and endlessly wearable — The Capri Bucket Hat is a lightweight statement piece designed to turn heads. Made from a textured upholstery-inspired fabric, it features vertical stripes in deep orange, lavender, deep pink, olive, light green, and tan, reminiscent of warm sunsets and coastal escapes. Fully lined with soft polyester for a comfortable fit, this unisex bucket hat brings color and character to any look—perfect for festival days, vacation vibes, or everyday expression.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Multi Stripe"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214289/pic2_wmgc37.jpg"
+      ],
+      "featured": false,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "100% Polyester Lightweight Upholstery Fabric",
+        "lining": "100% Polyester"
+      }
+    },
+    {
+      "id": "prod-003",
+      "name": "The Mercer Bucket Hat – Black, Tan & Grey",
+      "category": "bucket-hats",
+      "price": 40,
+      "description": "Elevate your everyday with our Textured Tweed Bucket Hat, a unisex staple crafted for bold subtlety. Featuring a unique blend of black, tan, and grey in an upholstery-inspired tweed fabric, this piece brings structure and edge to any look. Fully lined with smooth polyester for comfort and durability, it's perfect for transitional weather, day-to-night wear, or adding a textured twist to your essentials. Designed for all.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black/Tan/Grey"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214290/pic3_dz5fnc.jpg"
+      ],
+      "featured": true,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "100% Polyester Lightweight Upholstery Fabric",
+        "lining": "100% Polyester"
+      }
+    },
+    {
+      "id": "prod-004",
+      "name": "The Rue Bucket Hat – Embroidered Postcard Print in Light Blue, Olive & Tan",
+      "category": "bucket-hats",
+      "price": 35,
+      "description": "The Rue Bucket Hat captures the essence of travel, nostalgia, and effortless style. Designed in a lightly textured upholstery-inspired fabric, this unisex piece features an embroidered Paris print with vintage-style postcards and stamps in soft tones of light blue, olive, and tan. Fully lined with smooth polyester for a comfortable fit, it's a wearable souvenir of timeless charm. Whether you're wandering city streets or dreaming from afar, this hat adds a thoughtful, curated touch to any look.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Light Blue/Olive/Tan"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214290/pic4_cgywvq.jpg"
+      ],
+      "featured": false,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "100% Polyester Lightweight Upholstery Fabric",
+        "lining": "100% Polyester"
+      }
+    },
+    {
+      "id": "prod-005",
+      "name": "The Valencia Bucket Hat – Paisley Tapestry in Blue & Gold",
+      "category": "bucket-hats",
+      "price": 45,
+      "description": "The Valencia Bucket Hat blends vintage charm with modern edge. Crafted from a richly textured tweed upholstery fabric, it features a striking floral-paisley inspired print in light blue, navy, mustard yellow, and gold. This unisex piece adds bold personality and timeless texture to any look. Fully lined with smooth polyester for all-day comfort and structure. Dress it up, or let it elevate your everyday fit—either way, it makes a statement.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Blue/Gold"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214290/pic5_gzzaiq.jpg"
+      ],
+      "featured": false,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "100% Polyester Lightweight Upholstery Fabric",
+        "lining": "100% Polyester"
+      }
+    },
+    {
+      "id": "prod-006",
+      "name": "Siren Cutout One-Piece",
+      "category": "swim",
+      "price": 60,
+      "description": "Make waves in the Siren Cutout One-Piece, designed to turn heads with its bold silhouette and luxe texture. This asymmetrical halter suit features a sleek center ring detail, striking side cutouts, and a high-cut leg for an elongated, confident fit. Whether poolside or beach-bound, this statement piece balances edge and elegance effortlessly.",
+      "sizes": ["XS", "S", "M", "L", "XL", "1X"],
+      "colors": ["Ocean Obsidian", "Crimson Noir", "Midnight Depths"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214290/pic6_idlvhn.jpg"
+      ],
+      "featured": true,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "85% Nylon / 15% Spandex — embossed with a faux-crocodile texture for a rich, dimensional finish",
+        "lining": "82% Polyester / 18% Spandex — smooth, breathable, and supportive"
+      }
+    },
+    {
+      "id": "prod-007",
+      "name": "Isla Textured Bikini Set",
+      "category": "swim",
+      "price": 65,
+      "description": "The Isla Textured Bikini Set brings effortless sophistication to swimwear. Featuring a luxe embossed finish, the halter-style top offers a flattering crisscross neckline for added support and lift. Paired with adjustable tie-side bottoms, this set blends comfort with sleek, sculpted style. Perfect for sun-drenched escapes or rooftop lounging, this piece embodies elevated swim with a touch of edge.",
+      "sizes": ["XS", "S", "M", "L", "XL", "1X"],
+      "colors": ["Ocean Obsidian", "Crimson Noir", "Midnight Depths"],
+      "images": [
+        "https://res.cloudinary.com/whxy/image/upload/v1758214290/pic7_yj6zgf.jpg"
+      ],
+      "featured": false,
+      "inStock": true,
+      "fabricContent": {
+        "shell": "85% Nylon / 15% Spandex — embossed with a faux-crocodile texture for a rich, dimensional finish",
+        "lining": "82% Polyester / 18% Spandex — smooth, breathable, and supportive"
+      }
+    }
+  ]
+}

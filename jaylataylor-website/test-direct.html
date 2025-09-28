@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><title>Direct Test</title></head>
+<body>
+<h1>Direct Shop Test - No Dependencies</h1>
+<div id="productGrid" style="border: 2px solid blue; padding: 10px; min-height: 100px;">
+  Loading...
+</div>
+<div id="productCount">0</div>
+
+<script>
+// Direct implementation without shop.js
+async function directTest() {
+  console.log('Starting direct test...');
+
+  const grid = document.getElementById('productGrid');
+  const count = document.getElementById('productCount');
+
+  try {
+    // Fetch products
+    const response = await fetch('data/products.json');
+    console.log('Fetch status:', response.status);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch: ' + response.status);
+    }
+
+    const data = await response.json();
+    console.log('Products loaded:', data.products.length);
+
+    // Filter swim products
+    const swimProducts = data.products.filter(p => p.category === 'swim');
+    console.log('Swim products found:', swimProducts.length);
+
+    // Clear grid
+    grid.innerHTML = '';
+
+    // Render each product
+    swimProducts.forEach(product => {
+      const card = document.createElement('div');
+      card.style.cssText = 'border: 1px solid green; padding: 10px; margin: 5px;';
+      card.innerHTML = `
+        <h3>${product.name}</h3>
+        <p>Price: $${product.price}</p>
+        <p>ID: ${product.id}</p>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Update count
+    count.textContent = swimProducts.length;
+
+    console.log('Direct test complete!');
+
+  } catch (error) {
+    console.error('Direct test error:', error);
+    grid.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+  }
+}
+
+// Run test immediately
+directTest();
+</script>
+</body>
+</html>

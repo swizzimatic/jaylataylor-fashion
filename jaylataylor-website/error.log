@@ -1,0 +1,4 @@
+{"level":"error","message":"Missing required environment variables: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, JWT_SECRET","service":"jaylataylor-backend"}
+{"level":"error","message":"Please check your .env file","service":"jaylataylor-backend"}
+{"level":"error","message":"Missing required environment variables: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, JWT_SECRET","service":"jaylataylor-backend"}
+{"level":"error","message":"Please check your .env file or Vercel environment variables","service":"jaylataylor-backend"}

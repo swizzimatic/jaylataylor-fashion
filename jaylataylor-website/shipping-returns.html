@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shipping & Returns - Jayla Taylor Fashion">
+    <meta name="keywords" content="Jayla Taylor Shipping, Returns, Exchange Policy">
+    
+    <title>Shipping & Returns - Jayla Taylor Fashion Designer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Shipping & Returns Styles */
+        .shipping-header {
+            background-color: var(--secondary-dark);
+            padding: 120px 0 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .shipping-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold-2);
+        }
+        
+        .shipping-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .policy-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .policy-tab {
+            background-color: var(--secondary-dark);
+            border: 1px solid var(--accent-gold-2);
+            color: var(--neutral-light);
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border-radius: 4px;
+        }
+        
+        .policy-tab:hover,
+        .policy-tab.active {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+        }
+        
+        .policy-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .policy-section.active {
+            display: block;
+        }
+        
+        .policy-section h2 {
+            color: var(--accent-gold-2);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .policy-section h3 {
+            color: var(--accent-gold-1);
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .policy-section p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+            color: var(--neutral-light);
+        }
+        
+        .policy-section ul {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        
+        .policy-section li {
+            margin-bottom: 0.75rem;
+            color: var(--neutral-light);
+            line-height: 1.6;
+        }
+        
+        .shipping-options {
+            background-color: var(--secondary-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .shipping-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--primary-dark);
+        }
+        
+        .shipping-option:last-child {
+            border-bottom: none;
+        }
+        
+        .shipping-option-info h4 {
+            color: var(--accent-gold-2);
+            margin-bottom: 0.5rem;
+        }
+        
+        .shipping-option-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .shipping-price {
+            color: var(--accent-gold-1);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-box h4 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .process-steps {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .process-steps h4 {
+            color: var(--accent-gold-2);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            background-color: var(--accent-gold-2);
+            color: var(--primary-dark);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h5 {
+            color: var(--accent-gold-1);
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .contact-section {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-section h3 {
+            color: var(--accent-gold-2);
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .policy-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .policy-tab {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
+            .shipping-option {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .shipping-price {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 60px;">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="nyc-fashion-week.html" class="nav-link">NYC Fashion Week</a></li>
+                    <li><a href="paris-fashion-week.html" class="nav-link">Paris Fashion Week</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon search-icon">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="cart.html" class="nav-icon cart-count">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </a>
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shipping & Returns Header -->
+    <section class="shipping-header">
+        <div class="container">
+            <h1>Shipping & Returns</h1>
+            <p>Fast, secure shipping and hassle-free returns</p>
+        </div>
+    </section>
+
+    <!-- Shipping & Returns Content -->
+    <section class="section">
+        <div class="container">
+            <div class="shipping-content">
+                <!-- Policy Tabs -->
+                <div class="policy-tabs">
+                    <div class="policy-tab active" data-tab="shipping">Shipping</div>
+                    <div class="policy-tab" data-tab="returns">Returns</div>
+                    <div class="policy-tab" data-tab="exchanges">Exchanges</div>
+                    <div class="policy-tab" data-tab="international">International</div>
+                </div>
+
+                <!-- Shipping Information -->
+                <div class="policy-section active" id="shipping">
+                    <h2>Shipping Information</h2>
+                    
+                    <div class="highlight-box">
+                        <h4>Free Shipping on Orders Over $500</h4>
+                        <p>Enjoy complimentary standard shipping on all orders over $500 within the United States.</p>
+                    </div>
+
+                    <h3>Shipping Options</h3>
+                    <div class="shipping-options">
+                        <div class="shipping-option">
+                            <div class="shipping-option-info">
+                                <h4>Standard Shipping</h4>
+                                <p>5-7 business days • Signature confirmation included</p>
+                            </div>
+                            <div class="shipping-price">$25.00</div>
+                        </div>
+                        <div class="shipping-option">
+                            <div class="shipping-option-info">
+                                <h4>Express Shipping</h4>
+                                <p>2-3 business days • Priority handling & tracking</p>
+                            </div>
+                            <div class="shipping-price">$45.00</div>
+                        </div>
+                        <div class="shipping-option">
+                            <div class="shipping-option-info">
+                                <h4>Overnight Shipping</h4>
+                                <p>Next business day • Guaranteed delivery by 6 PM</p>
+                            </div>
+                            <div class="shipping-price">$75.00</div>
+                        </div>
+                    </div>
+
+                    <h3>Processing Time</h3>
+                    <ul>
+                        <li>Orders placed Monday-Friday before 2 PM EST ship the same day</li>
+                        <li>Orders placed after 2 PM EST or on weekends ship the next business day</li>
+                        <li>Custom or made-to-order items require 2-3 business days for processing</li>
+                        <li>During peak seasons (holidays), processing may take up to 3-5 business days</li>
+                    </ul>
+
+                    <h3>Shipping Areas</h3>
+                    <p>We currently ship to all 50 U.S. states, Puerto Rico, and U.S. territories. International shipping options are available for select countries.</p>
+
+                    <h3>Order Tracking</h3>
+                    <p>Once your order ships, you'll receive a confirmation email with tracking information. You can track your package through our website or directly with the carrier.</p>
+
+                    <div class="highlight-box">
+                        <h4>Packaging & Sustainability</h4>
+                        <p>All orders are carefully packaged in our signature packaging using eco-friendly materials. We're committed to reducing our environmental impact while ensuring your items arrive in perfect condition.</p>
+                    </div>
+                </div>
+
+                <!-- Returns Information -->
+                <div class="policy-section" id="returns">
+                    <h2>Returns Policy</h2>
+                    
+                    <div class="highlight-box">
+                        <h4>30-Day Return Window</h4>
+                        <p>We accept returns within 30 days of delivery for a full refund, provided items are in original condition.</p>
+                    </div>
+
+                    <h3>Return Eligibility</h3>
+                    <p>To be eligible for a return, items must meet the following criteria:</p>
+                    <ul>
+                        <li>Items must be unworn, unwashed, and in original condition</li>
+                        <li>All original tags and packaging must be included</li>
+                        <li>Swimwear must have hygiene strips intact</li>
+                        <li>Items must be returned within 30 days of delivery</li>
+                        <li>Original receipt or proof of purchase required</li>
+                    </ul>
+
+                    <h3>Non-Returnable Items</h3>
+                    <ul>
+                        <li>Items damaged by misuse or normal wear</li>
+                        <li>Swimwear with removed hygiene strips</li>
+                        <li>Items purchased with final sale discounts (marked as such)</li>
+                        <li>Custom or personalized items</li>
+                        <li>Items returned after 30 days</li>
+                    </ul>
+
+                    <div class="process-steps">
+                        <h4>Return Process</h4>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Initiate Return</h5>
+                                <p>Contact us at returns@jaylataylor.com or call (555) 123-4567 to start your return</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Receive Return Label</h5>
+                                <p>We'll email you a prepaid return shipping label within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Package & Ship</h5>
+                                <p>Pack items securely in original packaging and attach the return label</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Receive Refund</h5>
+                                <p>Refund processed within 3-5 business days of receiving your return</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Refund Information</h3>
+                    <ul>
+                        <li>Refunds are processed to the original payment method</li>
+                        <li>Credit card refunds take 3-5 business days to appear</li>
+                        <li>PayPal refunds are typically instant</li>
+                        <li>Original shipping charges are not refundable (unless item was defective)</li>
+                        <li>Return shipping is free when using our provided label</li>
+                    </ul>
+                </div>
+
+                <!-- Exchanges Information -->
+                <div class="policy-section" id="exchanges">
+                    <h2>Exchanges</h2>
+                    
+                    <div class="highlight-box">
+                        <h4>Easy Size & Color Exchanges</h4>
+                        <p>Need a different size or color? We make exchanges simple and fast.</p>
+                    </div>
+
+                    <h3>Exchange Eligibility</h3>
+                    <p>Exchanges are available for:</p>
+                    <ul>
+                        <li>Size exchanges (same item, different size)</li>
+                        <li>Color exchanges (same item, different color)</li>
+                        <li>Defective or damaged items</li>
+                        <li>Items received in error</li>
+                    </ul>
+
+                    <div class="process-steps">
+                        <h4>Exchange Process</h4>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Contact Customer Service</h5>
+                                <p>Email exchanges@jaylataylor.com with your order number and exchange request</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Confirm Availability</h5>
+                                <p>We'll check stock availability and confirm your exchange within 4 hours</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Ship Original Item</h5>
+                                <p>Send the original item back using our prepaid return label</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Receive New Item</h5>
+                                <p>Your exchange ships once we receive your original item</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Exchange Notes</h3>
+                    <ul>
+                        <li>Exchanges must be initiated within 30 days of delivery</li>
+                        <li>If the new item costs more, you'll be charged the difference</li>
+                        <li>If the new item costs less, you'll receive a refund for the difference</li>
+                        <li>Expedited exchanges available for $25 (new item ships before return received)</li>
+                        <li>Out-of-stock items can be backordered or fully refunded</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>Defective Item Policy</h4>
+                        <p>If you receive a defective item, we'll provide a prepaid return label and priority replacement at no cost to you. Contact us immediately for the fastest resolution.</p>
+                    </div>
+                </div>
+
+                <!-- International Shipping -->
+                <div class="policy-section" id="international">
+                    <h2>International Shipping</h2>
+                    
+                    <div class="highlight-box">
+                        <h4>Global Shipping Available</h4>
+                        <p>We ship to over 50 countries worldwide. International customers enjoy the same quality service and products.</p>
+                    </div>
+
+                    <h3>International Shipping Options</h3>
+                    <div class="shipping-options">
+                        <div class="shipping-option">
+                            <div class="shipping-option-info">
+                                <h4>Standard International</h4>
+                                <p>7-14 business days • Tracked & insured</p>
+                            </div>
+                            <div class="shipping-price">$35.00</div>
+                        </div>
+                        <div class="shipping-option">
+                            <div class="shipping-option-info">
+                                <h4>Express International</h4>
+                                <p>3-7 business days • Priority handling & tracking</p>
+                            </div>
+                            <div class="shipping-price">$65.00</div>
+                        </div>
+                    </div>
+
+                    <h3>Customs & Duties</h3>
+                    <ul>
+                        <li>International customers are responsible for all customs duties and taxes</li>
+                        <li>Packages are marked with accurate value and contents</li>
+                        <li>Delivery times may vary due to customs processing</li>
+                        <li>We are not responsible for packages held or returned by customs</li>
+                    </ul>
+
+                    <h3>International Returns</h3>
+                    <ul>
+                        <li>International returns are accepted within 30 days</li>
+                        <li>Customer responsible for return shipping costs</li>
+                        <li>Returns must be sent via trackable shipping method</li>
+                        <li>Items may be subject to import duties upon return</li>
+                        <li>Processing time may be longer due to international transit</li>
+                    </ul>
+
+                    <h3>Restricted Countries</h3>
+                    <p>Due to shipping restrictions, we currently cannot ship to certain countries. Please contact customer service to confirm if we ship to your location.</p>
+
+                    <div class="highlight-box">
+                        <h4>Currency & Payment</h4>
+                        <p>All prices are displayed in USD. International credit cards and PayPal are accepted. Your bank may charge foreign transaction fees.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-section">
+                    <h3>Need Help?</h3>
+                    <p>Our customer service team is here to assist you with any shipping or return questions.</p>
+                    <p>
+                        <strong>Email:</strong> customercare@jaylataylor.com<br>
+                        <strong>Phone:</strong> (555) 123-4567<br>
+                        <strong>Hours:</strong> Monday-Friday 9 AM - 6 PM EST
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0" alt="Jayla Taylor" style="height: 40px; margin-bottom: 10px;">
+                <p>Luxury Fashion Designer</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="shop.html?category=lingerie">Lingerie Collection</a></li>
+                    <li><a href="shop.html?category=swim">Swim Collection</a></li>
+                    <li><a href="shop.html?category=bucket-hats">Bucket Hats</a></li>
+                    <li><a href="gallery.html#timeless">Timeless (Archive)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="size-guide.html">Size Guide</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Newsletter</h5>
+                <p>Subscribe for exclusive updates and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Military with a copyright &copy; 2025 Jayla Taylor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Policy Tabs Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.policy-tab');
+            const sections = document.querySelectorAll('.policy-section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Remove active class from all tabs and sections
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding section
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

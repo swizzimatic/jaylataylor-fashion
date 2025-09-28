@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head><title>Complete Test</title></head>
+<body>
+<h1>Complete Shop Test with Full Logging</h1>
+
+<!-- All required DOM elements -->
+<div id="productGrid" style="border:2px solid red; min-height:100px; padding:10px;">
+  Product Grid (Initial Content)
+</div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked> All</label>
+  <label><input type="checkbox" value="swim"> Swim</label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+<div class="shop-sidebar"></div>
+
+<h2>Console Output:</h2>
+<div id="output" style="background:#f0f0f0; padding:10px; font-family:monospace; white-space:pre-wrap;"></div>
+
+<script>
+// Capture all output
+const output = document.getElementById('output');
+let logNum = 0;
+
+function addLog(msg, type = 'LOG') {
+  logNum++;
+  const time = new Date().toISOString().split('T')[1].split('.')[0];
+  output.innerHTML += `${logNum}. [${time}] [${type}] ${msg}\n`;
+}
+
+// Override console methods
+['log', 'error', 'warn'].forEach(method => {
+  const original = console[method];
+  console[method] = function(...args) {
+    original.apply(console, args);
+    addLog(args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' '), method.toUpperCase());
+  };
+});
+
+// Capture errors
+window.onerror = function(msg, url, line, col, error) {
+  addLog(`JS ERROR: ${msg} at ${url}:${line}:${col}`, 'ERROR');
+  if (error && error.stack) {
+    addLog('Stack: ' + error.stack, 'ERROR');
+  }
+  return false;
+};
+
+// Log initial state
+addLog('=== INITIAL STATE ===', 'LOG');
+addLog('URL: ' + window.location.href, 'LOG');
+addLog('productGrid exists: ' + !!document.getElementById('productGrid'), 'LOG');
+addLog('productCount exists: ' + !!document.getElementById('productCount'), 'LOG');
+addLog('categoryFilters exists: ' + !!document.getElementById('categoryFilters'), 'LOG');
+
+// Define cloudinaryReady globally
+addLog('Defining global cloudinaryReady...', 'LOG');
+let cloudinaryReady = false;
+
+// Track fetch
+const originalFetch = window.fetch;
+window.fetch = function(...args) {
+  addLog('FETCH: ' + args[0], 'LOG');
+  return originalFetch.apply(this, args)
+    .then(response => {
+      addLog('FETCH response: ' + response.status + ' for ' + args[0], 'LOG');
+      return response;
+    })
+    .catch(error => {
+      addLog('FETCH ERROR: ' + error.message, 'ERROR');
+      throw error;
+    });
+};
+
+addLog('=== LOADING SHOP.JS ===', 'LOG');
+</script>
+
+<!-- Load shop.js -->
+<script src="js/shop.js"></script>
+
+<script>
+addLog('=== SHOP.JS LOADED ===', 'LOG');
+
+// Check after delay
+setTimeout(() => {
+  addLog('=== CHECKING AFTER 3 SECONDS ===', 'LOG');
+  const grid = document.getElementById('productGrid');
+  addLog('Grid children count: ' + grid.children.length, 'LOG');
+  addLog('Grid HTML length: ' + grid.innerHTML.length, 'LOG');
+  if (grid.children.length === 0) {
+    addLog('No products rendered!', 'WARN');
+    addLog('Grid innerHTML: ' + grid.innerHTML.substring(0, 200), 'LOG');
+  } else {
+    addLog('Products rendered successfully!', 'LOG');
+    addLog('First child: ' + grid.children[0].outerHTML.substring(0, 100), 'LOG');
+  }
+}, 3000);
+
+// Also try manual fetch
+setTimeout(() => {
+  addLog('=== MANUAL FETCH TEST ===', 'LOG');
+  fetch('data/products.json')
+    .then(r => r.json())
+    .then(data => {
+      addLog('Manual fetch success: ' + data.products.length + ' products', 'LOG');
+      const swim = data.products.filter(p => p.category === 'swim');
+      addLog('Swim products: ' + swim.length, 'LOG');
+      swim.forEach(p => addLog('  - ' + p.name + ' ($' + p.price + ')', 'LOG'));
+    })
+    .catch(err => addLog('Manual fetch error: ' + err.message, 'ERROR'));
+}, 4000);
+</script>
+
+<h2>Expected Output:</h2>
+<ul>
+  <li>Should see "loadProducts() called"</li>
+  <li>Should see "Fetching data/products.json..."</li>
+  <li>Should see "Fetch response: 200"</li>
+  <li>Should see products rendering</li>
+</ul>
+
+</body>
+</html>

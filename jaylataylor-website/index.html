@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Jayla Taylor - Fashion Designer | Luxury Fashion Collections, Fashion Week Content & Professional Photography"
+        />
+        <meta
+            name="keywords"
+            content="Jayla Taylor, Fashion Designer, NYC Fashion Week, Paris Fashion Week, Luxury Fashion, Designer Clothing"
+        />
+
+        <title>
+            Jayla Taylor - Fashion Designer | Luxury Collections & Portfolio
+        </title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="container">
+                <nav class="nav-container">
+                    <a href="index.html" class="logo">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/HANGTAG1_dcne9m?_a=BAMAK+cc0"
+                            alt="Jayla Taylor"
+                            style="height: 60px"
+                        />
+                    </a>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="shop.html" class="nav-link">Shop</a></li>
+                        <li>
+                            <a href="nyc-fashion-week.html" class="nav-link"
+                                >NYC Fashion Week</a
+                            >
+                        </li>
+                        <li>
+                            <a href="paris-fashion-week.html" class="nav-link"
+                                >Paris Fashion Week</a
+                            >
+                        </li>
+                        <li>
+                            <a href="gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="#" class="nav-icon search-icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="cart.html" class="nav-icon cart-count">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </a>
+                        <div
+                            class="mobile-menu-toggle"
+                            id="mobileMenuToggle"
+                            role="button"
+                            tabindex="0"
+                            aria-label="Toggle navigation menu"
+                            aria-expanded="false"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    poster="https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/IMG_7600_ehvw34?_a=BAMAK+cc0"
+                >
+                    <source
+                        src="https://res.cloudinary.com/whxy/video/upload/v1758214287/test_3.mov_hgntlh.mov"
+                        type="video/mp4"
+                    />
+                    <!-- Fallback image for browsers that don't support video -->
+                    <img
+                        src="https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/IMG_7600_ehvw34?_a=BAMAK+cc0"
+                        alt="Jayla Taylor Fashion"
+                    />
+                </video>
+                <!-- Video overlay for better text readability -->
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Luxury Fashion & Beauty</h1>
+                    <p class="hero-subtitle">
+                        Timeless Elegance Meets Modern Sophistication
+                    </p>
+                    <a href="shop.html" class="btn btn-primary"
+                        >Shop Collection</a
+                    >
+                    <!-- Video controls for accessibility -->
+                    <button
+                        class="video-toggle"
+                        id="videoToggle"
+                        aria-label="Toggle video playback"
+                    >
+                        <i class="fas fa-pause"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion Week Showcase -->
+        <section
+            class="section"
+            style="background-color: var(--secondary-dark)"
+        >
+            <div class="container">
+                <h2 class="text-center">Fashion Week Highlights</h2>
+                <p
+                    class="text-center"
+                    style="color: var(--accent-gold-2); margin-bottom: 3rem"
+                >
+                    Experience the runway through our lens
+                </p>
+
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 30px;
+                        max-width: 800px;
+                        margin: 0 auto;
+                    "
+                >
+                    <div class="fashion-week-card">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/IMG_8048_ximob9?_a=BAMAK+cc0"
+                            alt="NYC Fashion Week 2023"
+                            style="width: 100%; border-radius: 4px"
+                        />
+                        <h3
+                            style="
+                                margin-top: 20px;
+                                color: var(--accent-gold-2);
+                            "
+                        >
+                            NYC Fashion Week '23
+                        </h3>
+                        <p>
+                            Exclusive behind-the-scenes content and runway
+                            highlights from New York Fashion Week.
+                        </p>
+                        <a
+                            href="nyc-fashion-week.html"
+                            class="btn btn-outline"
+                            style="margin-top: 15px"
+                            >View Gallery</a
+                        >
+                    </div>
+
+                    <div class="fashion-week-card">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fit,f_auto,h_1200,q_auto,w_1200/IMG_5895_1_hwqspj?_a=BAMAK+cc0"
+                            alt="Paris Fashion Week 2024"
+                            style="width: 100%; border-radius: 4px"
+                        />
+                        <h3
+                            style="
+                                margin-top: 20px;
+                                color: var(--accent-gold-2);
+                            "
+                        >
+                            Paris Fashion Week '24
+                        </h3>
+                        <p>
+                            Immerse yourself in the elegance and sophistication
+                            of Paris Fashion Week.
+                        </p>
+                        <a
+                            href="paris-fashion-week.html"
+                            class="btn btn-outline"
+                            style="margin-top: 15px"
+                            >View Gallery</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Featured Collections</h2>
+                <p
+                    class="text-center"
+                    style="color: var(--accent-gold-2); margin-bottom: 3rem"
+                >
+                    Discover our latest luxury pieces
+                </p>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SJM08773_mzxsbj?_a=BAMAK+cc0"
+                                alt="Lingerie Collection"
+                            />
+                            <div class="product-overlay">
+                                <a
+                                    href="shop.html?category=lingerie"
+                                    class="btn btn-outline"
+                                    >View Collection</a
+                                >
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Lingerie Collection</h3>
+                            <p class="product-price">From $150</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1587_xzwzgz?_a=BAMAK+cc0"
+                                alt="Swim Collection 2024"
+                            />
+                            <div class="product-overlay">
+                                <a
+                                    href="shop.html?category=swim"
+                                    class="btn btn-outline"
+                                    >View Collection</a
+                                >
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Swim Collection '24</h3>
+                            <p class="product-price">From $200</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_2926_wq0hp9?_a=BAMAK+cc0"
+                                alt="JT Accessories"
+                            />
+                            <div class="product-overlay">
+                                <a
+                                    href="shop.html?category=accessories"
+                                    class="btn btn-outline"
+                                    >View Collection</a
+                                >
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">JT Accessories</h3>
+                            <p class="product-price">From $75</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/Jayla_Taylor_Low_Res_M44B6352_1_grc8ek?_a=BAMAK+cc0"
+                                alt="Timeless Collection"
+                            />
+                            <div class="product-overlay">
+                                <a
+                                    href="shop.html?category=timeless"
+                                    class="btn btn-outline"
+                                    >View Collection</a
+                                >
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Timeless</h3>
+                            <p class="product-price">From $350</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magazine Features -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center">Press & Features</h2>
+                <p
+                    class="text-center"
+                    style="color: var(--accent-gold-2); margin-bottom: 3rem"
+                >
+                    As seen in leading fashion publications
+                </p>
+
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(
+                            auto-fit,
+                            minmax(200px, 1fr)
+                        );
+                        gap: 30px;
+                        max-width: 800px;
+                        margin: 0 auto;
+                    "
+                >
+                    <div class="magazine-logo" style="text-align: center">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_1087_sqsqhj?_a=BAMAK+cc0"
+                            alt="Vogue"
+                            style="
+                                width: 100%;
+                                max-width: 200px;
+                                filter: grayscale(100%);
+                                opacity: 0.7;
+                                transition: all 0.3s;
+                            "
+                        />
+                    </div>
+                    <div class="magazine-logo" style="text-align: center">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_3996_e6kgxk?_a=BAMAK+cc0"
+                            alt="Elle"
+                            style="
+                                width: 100%;
+                                max-width: 200px;
+                                filter: grayscale(100%);
+                                opacity: 0.7;
+                                transition: all 0.3s;
+                            "
+                        />
+                    </div>
+                    <div class="magazine-logo" style="text-align: center">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/SHOW4-207_vogbm4?_a=BAMAK+cc0"
+                            alt="Harper's Bazaar"
+                            style="
+                                width: 100%;
+                                max-width: 200px;
+                                filter: grayscale(100%);
+                                opacity: 0.7;
+                                transition: all 0.3s;
+                            "
+                        />
+                    </div>
+                    <div class="magazine-logo" style="text-align: center">
+                        <img
+                            src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_800,q_auto,w_800/IMG_8713_lftcmx?_a=BAMAK+cc0"
+                            alt="W Magazine"
+                            style="
+                                width: 100%;
+                                max-width: 200px;
+                                filter: grayscale(100%);
+                                opacity: 0.7;
+                                transition: all 0.3s;
+                            "
+                        />
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem">
+                    <a
+                        href="gallery.html#magazine-features"
+                        class="btn btn-primary"
+                        >View All Features</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section" style="background-color: var(--black)">
+            <div class="container">
+                <div
+                    style="max-width: 600px; margin: 0 auto; text-align: center"
+                >
+                    <h2>Stay In Touch</h2>
+                    <p style="color: var(--accent-gold-2); margin-bottom: 2rem">
+                        Subscribe to receive exclusive updates, new collection
+                        launches, and special offers
+                    </p>
+
+                    <form
+                        id="newsletterForm"
+                        style="display: flex; gap: 10px; margin-bottom: 1rem"
+                    >
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            required
+                            style="
+                                flex: 1;
+                                padding: 14px 20px;
+                                background-color: var(--secondary-dark);
+                                border: 1px solid var(--accent-gold-2);
+                                color: var(--neutral-light);
+                                font-family: var(--font-body);
+                                border-radius: 0;
+                            "
+                        />
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="border-radius: 0"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+
+                    <p
+                        style="
+                            font-size: 0.875rem;
+                            color: var(--neutral-light);
+                            opacity: 0.7;
+                        "
+                    >
+                        We respect your privacy. Unsubscribe at any time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img
+                        src="https://res.cloudinary.com/whxy/image/upload/c_fill,f_auto,g_auto:subject,h_150,q_auto,w_150/J.T_pgql90?_a=BAMAK+cc0"
+                        alt="Jayla Taylor"
+                        style="height: 40px; margin-bottom: 10px"
+                    />
+                    <p>Luxury Fashion Designer</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" aria-label="Facebook"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" aria-label="Twitter"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" aria-label="Pinterest"
+                            ><i class="fab fa-pinterest-p"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Collections</h5>
+                    <ul>
+                        <li>
+                            <a href="shop.html?category=lingerie"
+                                >Lingerie Collection</a
+                            >
+                        </li>
+                        <li>
+                            <a href="shop.html?category=swim"
+                                >Swim Collection</a
+                            >
+                        </li>
+                        <li>
+                            <a href="shop.html?category=bucket-hats"
+                                >Bucket Hats</a
+                            >
+                        </li>
+                        <li>
+                            <a href="gallery.html#timeless"
+                                >Timeless (Archive)</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Customer Care</h5>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
+                            <a href="shipping-returns.html"
+                                >Shipping & Returns</a
+                            >
+                        </li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html">Terms of Service</a>
+                        </li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe for exclusive updates and offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jayla Taylor. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

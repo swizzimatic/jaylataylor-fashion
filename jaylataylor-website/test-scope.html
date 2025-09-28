@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head><title>Scope Test</title></head>
+<body>
+<div id="productGrid"></div>
+<div id="productCount">0</div>
+<div id="categoryFilters">
+  <label><input type="checkbox" value="all" checked></label>
+  <label><input type="checkbox" value="swim"></label>
+</div>
+<select id="sortSelect"><option value="featured">Featured</option></select>
+<input id="priceRange" type="range" value="1000">
+<span id="maxPrice">1000</span>
+
+<pre id="log"></pre>
+
+<script>
+const log = document.getElementById('log');
+
+// Override console to see what's happening
+const originalLog = console.log;
+const originalError = console.error;
+const originalWarn = console.warn;
+
+console.log = function(...args) {
+  originalLog.apply(console, args);
+  log.textContent += '[LOG] ' + args.join(' ') + '\n';
+};
+
+console.error = function(...args) {
+  originalError.apply(console, args);
+  log.textContent += '[ERROR] ' + args.join(' ') + '\n';
+};
+
+console.warn = function(...args) {
+  originalWarn.apply(console, args);
+  log.textContent += '[WARN] ' + args.join(' ') + '\n';
+};
+
+window.addEventListener('error', function(e) {
+  log.textContent += '[JS ERROR] ' + e.message + ' at line ' + e.lineno + '\n';
+});
+</script>
+
+<script src="js/cloudinary-mapper.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
