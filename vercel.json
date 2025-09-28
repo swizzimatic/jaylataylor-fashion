@@ -1,28 +1,27 @@
 {
   "version": 2,
   "name": "jaylataylor-fashion",
-  "builds": [
-    {
-      "src": "jaylataylor-website/api/index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "jaylataylor-website/**",
-      "use": "@vercel/static"
+  "functions": {
+    "jaylataylor-website/api/index.js": {
+      "maxDuration": 10
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/jaylataylor-website/api/index.js"
+      "source": "/api/:path*",
+      "destination": "/jaylataylor-website/api"
     },
     {
-      "src": "/health",
-      "dest": "/jaylataylor-website/api/index.js"
+      "source": "/health",
+      "destination": "/jaylataylor-website/api"
     },
     {
-      "src": "/(.*)",
-      "dest": "/jaylataylor-website/$1"
+      "source": "/:path*",
+      "destination": "/jaylataylor-website/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/jaylataylor-website/index.html"
     }
   ]
 }
