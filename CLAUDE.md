@@ -2,6 +2,21 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## ⚠️ CRITICAL DEPLOYMENT WARNING
+
+**NEVER** create or modify `vercel.json` files in subdirectories! The ONLY vercel.json should be at the repository root with this exact configuration:
+
+```json
+{
+  "version": 2,
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": "jaylataylor-website",
+  "framework": null
+}
+```
+
+See `DEPLOYMENT_SAFEGUARDS.md` for full details on preventing 404 errors.
+
 ## Repository Overview
 
 Jayla Taylor's fashion design portfolio and e-commerce website featuring luxury collections including bucket hats, swimwear, and lingerie. The project combines a static frontend with an Express.js payment gateway backend.
