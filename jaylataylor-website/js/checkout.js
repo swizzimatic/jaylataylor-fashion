@@ -61,8 +61,31 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
     
-    // Get cart data
-    const cart = window.jaylaTaylorCart;
+    // Get cart data - with fallback initialization
+    let cart = window.jaylaTaylorCart;
+
+    // Fallback: If cart isn't initialized from main.js, initialize it here
+    if (!cart) {
+        console.warn('Cart not initialized from main.js, creating fallback cart');
+        cart = {
+            items: (() => {
+                try {
+                    const stored = localStorage.getItem('jaylaTaylorCart');
+                    return stored ? JSON.parse(stored) : [];
+                } catch (error) {
+                    console.error('Error loading cart from localStorage:', error);
+                    return [];
+                }
+            })(),
+            getTotal: function() {
+                return this.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+            },
+            getItemCount: function() {
+                return this.items.reduce((count, item) => count + item.quantity, 0);
+            }
+        };
+    }
+
     const items = cart.items;
     
     // Shipping prices
@@ -80,7 +103,15 @@ document.addEventListener('DOMContentLoaded', async function() {
         const shipping = subtotal > 500 ? 0 : shippingPrices[selectedShipping];
         const tax = subtotal * 0.08;
         const total = subtotal + shipping + tax;
-        
+
+        console.log('Cart totals:', {
+            itemCount: cart.items.length,
+            subtotal,
+            shipping,
+            tax,
+            total
+        });
+
         return { subtotal, shipping, tax, total };
     }
     
