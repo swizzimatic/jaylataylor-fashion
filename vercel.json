@@ -1,15 +1,27 @@
 {
   "version": 2,
-  "buildCommand": "cd jaylataylor-website/backend && npm install",
-  "outputDirectory": "jaylataylor-website",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/:path*",
-      "destination": "/api"
+      "src": "jaylataylor-website/api/index.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/health",
-      "destination": "/api"
+      "src": "jaylataylor-website/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/jaylataylor-website/api/index.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/jaylataylor-website/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/jaylataylor-website/$1"
     }
   ]
 }
