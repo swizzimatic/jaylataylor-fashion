@@ -19,202 +19,222 @@ See `DEPLOYMENT_SAFEGUARDS.md` for full details on preventing 404 errors.
 
 ## Repository Overview
 
-Jayla Taylor's fashion design portfolio and e-commerce website featuring luxury collections including bucket hats, swimwear, and lingerie. The project combines a static frontend with an Express.js payment gateway backend.
+Jayla Taylor's luxury fashion e-commerce platform with static frontend and secure payment processing. The architecture separates presentation (static HTML/CSS/JS) from payment processing (Express.js/Stripe backend).
 
 ## Common Development Commands
 
-### Frontend Development (Static Site)
+### Frontend Development
 ```bash
-# Development server (use any simple HTTP server)
-cd jaylataylor-website
-python -m http.server 8000
-# Or use Live Server extension in VS Code
-
-# Alternative with Node.js http-server
-npx http-server -p 8000
+# Start development server (from repository root)
+cd jaylataylor-website && python -m http.server 8000
+# OR
+npx http-server jaylataylor-website -p 8000
 ```
 
 ### Backend Development (Payment Gateway)
 ```bash
-# Setup
 cd jaylataylor-website/backend
+
+# Install dependencies
 npm install
 
-# Development with auto-reload
+# Development with auto-reload (uses nodemon)
 npm run dev
 
-# Production
+# Production mode
 npm start
 
-# Environment setup
-cp .env.example .env
-# Edit .env with Stripe keys and configuration
+# Security checks
+npm run security-check
+npm run security-fix
+
+# Generate new security tokens
+npm run generate-secrets
 ```
 
-### Product Data Management
+### Testing Payment Flow
 ```bash
-# Validate product data structure
-node -e "console.log(JSON.parse(require('fs').readFileSync('data/products.json', 'utf8')))"
-
-# Backup product data before changes
-cp data/products.json data/products.backup.json
-```
-
-## High-Level Architecture
-
-### Frontend Architecture (Static HTML/CSS/JS)
-```
-jaylataylor-website/
-├── index.html              # Homepage with hero section
-├── shop.html              # Product catalog with filtering
-├── cart.html              # Shopping cart management
-├── checkout.html          # Stripe payment integration
-├── gallery.html           # Fashion photography showcase
-├── nyc-fashion-week.html  # NYC Fashion Week content
-├── paris-fashion-week.html # Paris Fashion Week content
-├── about.html             # Designer biography
-├── contact.html           # Contact form
-├── css/                   # Modular stylesheets per page
-├── js/                    # Vanilla JavaScript modules
-├── data/
-│   └── products.json      # Product catalog data
-└── assets/                # Images and media
-```
-
-### Backend Architecture (Express.js Payment Gateway)
-```
-backend/
-├── server.js              # Main Express application
-├── routes/
-│   └── api.js            # Payment and webhook endpoints
-├── middleware/
-│   ├── cors.js           # CORS configuration
-│   └── errorHandler.js   # Error handling middleware
-├── utils/
-│   ├── stripe.js         # Stripe configuration
-│   └── productValidator.js # Server-side product validation
-└── data/
-    └── products.json     # Server-side product data mirror
-```
-
-### Data Flow Architecture
-1. **Product Display**: Frontend loads from `data/products.json`
-2. **Cart Management**: Local storage for cart persistence
-3. **Payment Processing**: Frontend → Backend API → Stripe
-4. **Collection Restrictions**: Server enforces purchasable collections
-
-### Key Design Patterns
-
-#### Collection-Based Purchase Restrictions
-- **Purchasable**: `bucket-hats`, `swim`, `lingerie`
-- **Display Only**: `timeless` (archive pieces, `notForSale: true`)
-- Server validates all purchases against collection rules
-
-#### Price Validation Flow
-```javascript
-// Frontend sends cart items with IDs and quantities
-{ cartItems: [{ id: "prod-001", quantity: 2 }] }
-
-// Backend validates against server-side product data
-// Creates Stripe PaymentIntent with verified amounts
-// Returns client secret for frontend completion
-```
-
-#### Responsive Image Architecture
-- Product images hosted externally (jaylataylor.com domain)
-- Gallery content organized by collection type
-- Lazy loading implementation in gallery.js
-
-## Configuration Requirements
-
-### Environment Variables (.env)
-```env
-# Required
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-
-# Optional
-PORT=3001
-NODE_ENV=development
-FRONTEND_URL=http://localhost:8000
-```
-
-### Stripe Integration Points
-- **Frontend**: `js/checkout.js` requires publishable key
-- **Backend**: Payment intent creation and webhook handling
-- **Testing**: Use Stripe test cards (4242 4242 4242 4242)
-
-## Content Management
-
-### Product Data Structure
-Each product requires:
-- Unique ID, name, category, price
-- Size and color options
-- Fabric content details
-- Image URLs and stock status
-- Collection-specific metadata
-
-### Image Organization
-```
-content/
-├── Bucket Hats/           # Product photography
-├── Swim Collection/       # Swimwear photos
-├── Lingerie Collection/   # Intimate apparel
-├── Timeless Collection/   # Archive pieces
-├── Fashion Week Content/  # Event photography
-└── Magazine Features/     # Press coverage
-```
-
-## Security Considerations
-
-### Payment Security
-- Server-side price validation prevents tampering
-- Webhook signature verification for payment confirmation
-- No sensitive data stored in frontend JavaScript
-
-### Input Validation
-- Product ID validation against server-side catalog
-- Quantity limits and type checking
-- Collection restriction enforcement
-
-## Testing Strategy
-
-### Backend API Testing
-```bash
-# Health check
+# Test backend health
 curl http://localhost:3001/api/health
 
-# Create payment intent
+# Test payment intent creation (use Stripe test card: 4242424242424242)
 curl -X POST http://localhost:3001/api/create-payment-intent \
   -H "Content-Type: application/json" \
   -d '{"cartItems": [{"id": "prod-001", "quantity": 1}]}'
 ```
 
-### Frontend Testing
-- Test cart functionality across browser refresh
-- Verify responsive design on mobile devices
-- Test payment flow with Stripe test cards
-- Validate collection filtering and sorting
+### Deployment Commands
+```bash
+# Deploy to Vercel (from root, never from subdirectory!)
+vercel --prod --yes
 
-### Collection Restriction Testing
-- Attempt purchase of `timeless` collection items (should fail)
-- Verify purchasable collections work correctly
-- Test mixed cart scenarios
+# Verify deployment
+curl -I https://www.jaylataylor.com
+```
 
-## Deployment Considerations
+## High-Level Architecture
 
-### Frontend Deployment
-- Static hosting (Netlify, Vercel, GitHub Pages)
-- No build process required
-- Update image paths for production domain
+### Three-Tier Architecture
 
-### Backend Deployment
-- Node.js hosting (Heroku, DigitalOcean, AWS)
-- Environment variables for production Stripe keys
-- HTTPS required for Stripe in production
-- Configure webhook endpoint in Stripe Dashboard
+```
+┌─────────────────────────────────────────────────────────┐
+│                     PRESENTATION LAYER                   │
+│         Static HTML/CSS/JS (jaylataylor-website/)        │
+│  • Product catalog (shop.html + shop.js)                 │
+│  • Shopping cart (localStorage + cart.html)              │
+│  • Checkout flow (checkout.html + Stripe Elements)       │
+└─────────────────────────────────────────────────────────┘
+                             ↕
+┌─────────────────────────────────────────────────────────┐
+│                    PAYMENT GATEWAY LAYER                 │
+│          Express.js Backend (backend/server-secured.js)  │
+│  • Price validation (server-side products.json)          │
+│  • Stripe payment intents with platform fees             │
+│  • Security middleware (helmet, rate limiting, CORS)     │
+│  • Webhook processing for payment confirmation           │
+└─────────────────────────────────────────────────────────┘
+                             ↕
+┌─────────────────────────────────────────────────────────┐
+│                    EXTERNAL SERVICES                     │
+│  • Stripe API (payment processing + Connect)             │
+│  • Supabase (cart persistence - in development)          │
+│  • Cloudinary (image CDN)                                │
+└─────────────────────────────────────────────────────────┘
+```
 
-### Content Delivery
-- Image optimization for web delivery
-- CDN configuration for global performance
-- Gallery content organization and compression
+### Critical Data Flows
+
+#### Payment Processing Flow
+1. **Cart Creation**: User adds items → stored in localStorage
+2. **Price Calculation**: Frontend calculates display price from `data/products.json`
+3. **Payment Intent**: Backend validates prices against server-side `products.json`
+4. **Stripe Processing**: Creates payment intent with 10% platform fee
+5. **Webhook Confirmation**: Stripe webhook confirms successful payment
+
+#### Security Architecture
+```javascript
+// Backend security layers (order matters!)
+app.use(securityHeaders);        // helmet, CSP, HSTS
+app.use(corsOptions);            // Whitelist specific origins
+app.use(rateLimiter);            // Prevent abuse
+app.use(sessionMiddleware);      // Secure sessions
+app.use(validateRequest);        // Input sanitization
+app.use(authenticateJWT);        // JWT verification (where needed)
+```
+
+#### Collection Restrictions
+- **Purchasable Collections**: `bucket-hats`, `swim`, `lingerie`
+- **Display-Only Collections**: `timeless` (notForSale: true)
+- Enforcement happens at backend payment validation, not frontend
+
+### Key JavaScript Modules
+
+#### Frontend Modules
+- `shop.js` / `shop-secured.js`: Product catalog and filtering logic
+- `checkout.js`: Stripe Elements integration and payment flow
+- `supabase-client.js`: Cart persistence (TODO: needs Supabase config)
+- `security.js`: Frontend security utilities (XSS prevention)
+- `stripe-connect.js`: Platform fee calculation and display
+
+#### Backend Modules
+- `server-secured.js`: Main Express app with all security middleware
+- `routes/api-secured.js`: Payment endpoints with validation
+- `middleware/security.js`: Security headers and protections
+- `utils/stripe.js`: Stripe client configuration
+
+### Environment Configuration
+
+#### Required Environment Variables
+```env
+# Stripe (NEVER commit actual keys!)
+STRIPE_SECRET_KEY=sk_live_...
+STRIPE_PUBLISHABLE_KEY=pk_live_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+JAYLA_STRIPE_ACCOUNT_ID=acct_...
+
+# Security
+JWT_SECRET=[64-byte hex string]
+SESSION_SECRET=[32-byte hex string]
+
+# Platform Configuration
+PLATFORM_FEE_PERCENTAGE=10
+```
+
+#### Vercel Deployment Variables
+All sensitive variables must be configured in Vercel Dashboard:
+- Settings → Environment Variables
+- Add for Production environment
+- Never store in code or .env files in repository
+
+### Product Data Structure
+
+Products exist in two places (must stay synchronized):
+- `jaylataylor-website/data/products.json` (frontend display)
+- `jaylataylor-website/backend/data/products.json` (price validation)
+
+```javascript
+{
+  "id": "unique-product-id",
+  "name": "Product Name",
+  "price": 299,              // Integer in dollars
+  "category": "bucket-hats", // Must match collection rules
+  "sizes": ["S", "M", "L"],
+  "colors": ["Black", "White"],
+  "fabric": "100% Cotton",
+  "notForSale": false,       // true for timeless collection
+  "images": ["url1", "url2"],
+  "inStock": true
+}
+```
+
+### Serverless Function Configuration
+
+The project uses Vercel serverless functions via `jaylataylor-website/api/index.js`:
+- Wraps the Express backend with `serverless-http`
+- Validates environment variables on cold start
+- Provides health checks and logging
+
+### Testing Strategy
+
+#### Payment Testing Checklist
+1. Test with Stripe test cards (4242 4242 4242 4242)
+2. Verify platform fee calculation (10% to PRSM Tech)
+3. Check collection restrictions (timeless items should fail)
+4. Validate webhook signature verification
+5. Test rate limiting (100 requests per 15 minutes)
+
+#### Security Testing
+```bash
+# Check for vulnerabilities
+npm audit
+
+# Test CORS restrictions
+curl -H "Origin: https://malicious-site.com" http://localhost:3001/api/health
+
+# Verify rate limiting
+for i in {1..101}; do curl http://localhost:3001/api/health; done
+```
+
+## Deployment Safeguards
+
+1. **Always deploy from repository root**: `vercel --prod`
+2. **Never create subdirectory configs**: Only `/vercel.json`
+3. **Check before deploying**: See `.github/DEPLOYMENT_CHECKLIST.md`
+4. **Verify after deployment**: Test all critical paths
+
+## Current Development Status
+
+### Completed
+- ✅ Static site with product catalog
+- ✅ Stripe payment integration with platform fees
+- ✅ Security middleware implementation
+- ✅ Vercel deployment configuration
+
+### In Progress
+- 🔄 Supabase integration for cart persistence (credentials needed)
+- 🔄 Email confirmation system (SendGrid setup required)
+
+### TODO
+- ⏳ Complete Stripe Connect onboarding for Jayla's account
+- ⏳ Configure production Supabase instance
+- ⏳ Implement order management dashboard
