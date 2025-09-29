@@ -4,16 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## ⚠️ CRITICAL DEPLOYMENT WARNING
 
-**NEVER** create or modify `vercel.json` files in subdirectories! The ONLY vercel.json should be at the repository root with this exact configuration:
+**NEVER** create or modify `vercel.json` files in subdirectories! The ONLY vercel.json should be at the repository root.
 
-```json
-{
-  "version": 2,
-  "buildCommand": "echo 'No build required'",
-  "outputDirectory": "jaylataylor-website",
-  "framework": null
-}
-```
+**NOTE**: The project uses a subdirectory structure where all website files are in `jaylataylor-website/`. For the API to work correctly, we cannot use `outputDirectory` in vercel.json as it prevents serverless functions from being detected. Instead, we must:
+1. Deploy from the repository root
+2. Use Vercel Dashboard to set Root Directory to `jaylataylor-website`
+3. Keep vercel.json minimal or remove it entirely
 
 See `DEPLOYMENT_SAFEGUARDS.md` for full details on preventing 404 errors.
 
